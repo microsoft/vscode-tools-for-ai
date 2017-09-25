@@ -1,4 +1,4 @@
- # Visual Studio Code Tools for AI
+# Visual Studio Code Tools for AI
 Visual Studio Code Tools for AI is an extension to build, test, and deploy Deep Learning / AI solutions. It seamlessly integrates with Azure Machine Learning for robust experimentation capabilities, including but not limited to submitting data preparation and model training jobs transparently to different compute targets. Additionally, it provides support for custom metrics and run history tracking, enabling data science reproducibility and auditing. Enterprise ready collaboration, allow to securely work on project with other people.
 
 Get started with deep learning using [Microsoft Cognitive Toolkit (CNTK)](http://www.microsoft.com/en-us/cognitive-toolkit), [Google TensorFlow](https://www.tensorflow.org), or other deep-learning frameworks today.  
@@ -20,7 +20,10 @@ This extension makes it easy to train models on your local computer or you can s
 
 
 ## Exploring project samples
-Visual Studio Code Tools for AI comes with a Sample Explorer. The Sample Explorer makes it easy to discover samples and try them with only a few clicks. 
+Visual Studio Code Tools for AI comes with a Sample Explorer via integration with Azure Machine Learning. The Sample Explorer makes it easy to discover samples and try them with only a few clicks. 
+
+> [!TIP]
+> You will need Azure Machine Learning Workbench to be installed. See instructions at [How to install Azure Machine Learning Workbench](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation)  
 
 To open the explorer, do as follow:   
 1. Open the command palette (View > **Command Palette** or **Ctrl+Shift+P**).
