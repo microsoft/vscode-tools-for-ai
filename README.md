@@ -5,7 +5,7 @@ Get started with deep learning using [Microsoft Cognitive Toolkit (CNTK)](http:/
  
 ## Features
 
-### Develop deep learning and AI solutions across Windows, Linux and MacOS
+### Develop deep learning and AI solutions across Windows and MacOS
 VS Code Tools for AI is a cross-platform extension that supports deep learning frameworks including [Microsoft Cognitive Toolkit (CNTK)](http://www.microsoft.com/en-us/cognitive-toolkit), [Google TensorFlow](https://www.tensorflow.org) and more.  
 
 Because it's an IDE we've enabled familiar code editor features like syntax highlighting, IntelliSense (auto-completion) and text auto formatting. You can interactively test your deep learning application in your local environment using step-through debugging on local variables and models. 
