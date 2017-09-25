@@ -110,7 +110,7 @@ The [Microsoft Enterprise and Developer Privacy Statement] describes the privacy
 This extension is [licensed under the MIT License] and subject to the terms of the [End User License Agreement](EULA.md). 
 
 [Microsoft Enterprise and Developer Privacy Statement]:https://go.microsoft.com/fwlink/?LinkId=786907&lang=en7
-[licensed under the MIT License]: /LICENSE.md
+[licensed under the MIT License]: /LICENSE
 [Microsoft Open Source Code of Conduct]:https://opensource.microsoft.com/codeofconduct/
 [Code of Conduct FAQ]:https://opensource.microsoft.com/codeofconduct/faq/
 [opencode@microsoft.com]:mailto:opencode@microsoft.com
