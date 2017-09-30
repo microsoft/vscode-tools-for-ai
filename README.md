@@ -90,6 +90,10 @@ Currently this extension supports the following 64-bit operating systems:
 Before programming deep learning applications, users need to install latest NVIDIA driver/CUDA/cuDNN (when a NVIDIA GPU is available),
 Python, dependent Python libraries such as NumPy/SciPy, and various deep learning frameworks such as Microsoft Cognitive Toolkit (CNTK), TensorFlow, Caffe2, MXNet, Keras, Theano, PyTorch and Chainer.
 
+> [!NOTE]
+>
+> Software introduction is excerpted from their homepages.
+
 ## NVIDIA GPU driver, CUDA and cuDNN
 
 Deep learning frameworks take advantage of NVIDIA GPU to let machines learn at a speed, accuracy, and scale towards true artificial intelligence.
