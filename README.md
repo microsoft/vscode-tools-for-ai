@@ -100,6 +100,7 @@ Deep learning frameworks take advantage of NVIDIA GPU to let machines learn at a
 If your computer has NVIDIA GPU cards, please visit [here](http://www.nvidia.com/Download/index.aspx) or try OS update to install the latest driver.
 
 > [!NOTE]
+>
 > Recent Mac computers don't have built-in NVIDIA GPU.
 
 [CUDA](https://developer.nvidia.com/cuda-zone) is a parallel computing platform and programming model invented by NVIDIA.
@@ -118,6 +119,7 @@ Ensure to add the directory containing cuDNN binary to the %PATH% or $Path envir
 On Windows, you can copy cudnn64_6.dll to "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin".
 
 > [!NOTE]
+>
 > Previous deep learning frameworks such as CNTK 2.0 and TensorFlow 1.2.1 need cuDNN v5.1.
 > However, you can install multiple cuDNN versions together.
 
@@ -184,11 +186,13 @@ The Microsoft Cognitive Toolkit (https://cntk.ai), is a unified deep-learning to
 CNTK supports both BrainScript and Python programming languages.
 
 > [!NOTE]
+>
 > CNTK currently does not support macOS.
 
 To install CNTK BrainScript package, run the following command in a terminal:
 - Visit [here](https://github.com/Microsoft/CNTK/releases/tag/v2.2) to download the CPU-only or GPU with 1bit-SGD package.
     > [!NOTE]
+	>
     > CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD License](https://docs.microsoft.com/en-us/cognitive-toolkit/cntk-1bit-sgd-license) which is MORE restrictive, than the major CNTK License.
 
 - Windows
@@ -239,6 +243,7 @@ Briefly, run the following command in a terminal:
     ```
 
 > [!NOTE]
+>
 > As of version 1.2, TensorFlow no longer provides GPU support for macOS.
 
 ## Caffe2
@@ -265,6 +270,7 @@ To install MXNet, run the following command in a terminal:
         pip3.5 install mxnet
         ```
         > [!NOTE]
+		>
         > Stable version 0.11.0 does not have a Windows wheel package, so you may need to install the latest beta version.
     - non-Windows
         ```bash
@@ -305,12 +311,14 @@ To install PyTorch, please run the following command in a terminal:
     pip3.5 install http://download.pytorch.org/whl/torch-0.2.0.post3-cp35-cp35m-macosx_10_7_x86_64.whl
     ```
     > [!NOTE]
+	>
     > macOS binaries dont support CUDA, install from source if CUDA is needed
 - Linux
     ```bash
     pip3.5 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl
     ```
     > [!NOTE]
+	>
     > This single package supports both GPU and CPU.
 
 Finally, install torchvision on non-Windows:
@@ -329,6 +337,7 @@ pip3.5 install cupy
 ```
 
 > [!NOTE]
+>
 > On Windows, you need [Visual C++ 2015 Build Tools](http://go.microsoft.com/fwlink/?LinkId=691126&__hstc=268264337.db3b3e714fc37caa42645b589f24066b.1506598067386.1506598067386.1506598067386.1&__hssc=268264337.1.1506598067386&__hsfp=1947375990&fixForIE=.exe) to compile CuPy.
 
 To install Chainer, please run the following command in a terminal:
