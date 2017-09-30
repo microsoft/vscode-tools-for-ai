@@ -80,15 +80,28 @@ The Job List View opens and displays all the runs and some related information.
 
 To view the results of a job, click on the **job ID** link to see detailed information. 
 
+# Using
+- First, install [Visual Studio Code](http://code.visualstudio.com/) then install **Tools for AI** extension by pressing **F1** or **ctrl+shift+p** to open command palette, select **Install Extension** and type **tools for AI**. 
+
+# Commands
+The extension provides several commands in the Command Palette for working with deep learning and machine learning:
+- **AI: List Jobs**: View list of recent jobs you've submitted and their details
+- **AI: Open Azure ML Sample Explorer**: Quickly get started with machine learning and deep learning experimentation by downloading sample projects you can run and modify to meet your needs 
+- **AI: Azure ML - Set Subscription**:  Set your Azure Subscription to use for Azure Machine Learning experimentation 
+- **AI: Azure ML - Open Terminal**: Open Azure CLI terminal to access full Azure feature set
+- **AI: Add Platform Configuration**: Configure Azure Machine learning compute target
+
 # Supported Operating Systems
 Currently this extension supports the following 64-bit operating systems:
 - Windows
 - macOS
 
-# Installing deep learning frameworks 
+# Preparing your environment
 
-Before programming deep learning applications, users need to install latest NVIDIA driver/CUDA/cuDNN (when a NVIDIA GPU is available),
-Python, dependent Python libraries such as NumPy/SciPy, and various deep learning frameworks such as Microsoft Cognitive Toolkit (CNTK), TensorFlow, Caffe2, MXNet, Keras, Theano, PyTorch and Chainer.
+Before creating deep learning applications, you will need to make sure you have the latest applicable prerequisites installed. 
+
+- If you have an NVIDIA GPU, be sure to install the latest NVIDIA driver/CUDA/cuDNN 
+- Additonally you should ensure you have installed Python and Python libraries such as NumPy/SciPy, and various deep learning frameworks such as Microsoft Cognitive Toolkit (CNTK), TensorFlow, Caffe2, MXNet, Keras, Theano, PyTorch and Chainer.
 
 > [!NOTE]
 >
@@ -96,27 +109,34 @@ Python, dependent Python libraries such as NumPy/SciPy, and various deep learnin
 
 ## NVIDIA GPU driver, CUDA and cuDNN
 
-Deep learning frameworks take advantage of NVIDIA GPU to let machines learn at a speed, accuracy, and scale towards true artificial intelligence.
-If your computer has NVIDIA GPU cards, please visit [here](http://www.nvidia.com/Download/index.aspx) or try OS update to install the latest driver.
+### NVIDIA GPU driver
+
+Deep learning frameworks take advantage of NVIDIA GPU to let machines learn at a speed, accuracy, and scale towards true artificial intelligence. If your computer has NVIDIA GPU cards, please visit [here](http://www.nvidia.com/Download/index.aspx) or try OS update to install the latest driver.
 
 > [!NOTE]
 >
 > Recent Mac computers don't have built-in NVIDIA GPU.
 
-[CUDA](https://developer.nvidia.com/cuda-zone) is a parallel computing platform and programming model invented by NVIDIA.
-It enables dramatic increases in computing performance by harnessing the power of the GPU.
-CUDA Toolkit 8.0 is required by deep learning frameworks.
-Visit this [site](https://developer.nvidia.com/cuda-80-ga2-download-archive), download CUDA and install it.
-Make sure to install the CUDA runtime libraries, and then add CUDA binary path to the %PATH% or $Path environment variable.
-On Windows, this path is "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin" by default.
+### CUDA
+
+[CUDA](https://developer.nvidia.com/cuda-zone) is a parallel computing platform and programming model invented by NVIDIA. It enables dramatic increases in computing performance by harnessing the power of the GPU. CUDA Toolkit 8.0 is required by deep learning frameworks. 
+
+To install CUDA
+
+- Visit this [site](https://developer.nvidia.com/cuda-80-ga2-download-archive), download CUDA and install it.
+- Make sure to install the CUDA runtime libraries, and then add CUDA binary path to the %PATH% or $Path environment variable.
+- On Windows, this path is "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin" by default.
 
 ![install CUDA on Windows](/media/install_cuda_win.png)
 
-[cuDNN](https://developer.nvidia.com/cudnn) (CUDA Deep Neural Network library) is a GPU-accelerated library of primitives for deep neural networks by NVIDIA.
-cuDNN v6 is required by latest deep learning frameworks.
-Please visit [here](https://developer.nvidia.com/rdp/cudnn-download) for downloading and installation.
-Ensure to add the directory containing cuDNN binary to the %PATH% or $Path environment variable.
-On Windows, you can copy cudnn64_6.dll to "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin".
+### cuDNN
+
+[cuDNN](https://developer.nvidia.com/cudnn) (CUDA Deep Neural Network library) is a GPU-accelerated library of primitives for deep neural networks by NVIDIA. cuDNN v6 is required by latest deep learning frameworks.
+
+To install cuDNN
+- Visit [here](https://developer.nvidia.com/rdp/cudnn-download) to download and install
+- Ensure to add the directory containing cuDNN binary to the %PATH% or $Path environment variable.
+- On Windows, you can copy cudnn64_6.dll to "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin".
 
 > [!NOTE]
 >
@@ -126,17 +146,19 @@ On Windows, you can copy cudnn64_6.dll to "C:\Program Files\NVIDIA GPU Computing
 
 ## Python
 
-Python has been the primary programming language for deep learning applications.
-64-bit Python distribution is required, and [Python 3.5.4](https://www.python.org/downloads/release/python-354/) is recommended for the best compatibility.
+Python has been the primary programming language for deep learning applications. 64-bit Python distribution is required, and [Python 3.5.4](https://www.python.org/downloads/release/python-354/) is recommended for the best compatibility.
 
-When installing Python on Windows, we suggest to install the Python launcher for yourself only, and add Python to the %PATH% environment variable.
-Please ensure to install pip which is the package management system used to install and manage software packages written in Python.
+### To install Python on Windows
+- We suggest to install the Python launcher for yourself only, and add Python to the %PATH% environment variable.
+- Please ensure to install pip which is the package management system used to install and manage software packages written in Python.
+
 Deep Learning frameworks rely on pip for their own installation.
 
 ![install Python on Windows](/media/install_python_win.png)
 
 Then, we need to verify whether Python 3.5 is installed correctly, and upgrade pip to the latest version by executing the following commands in a terminal:
-- Windows
+
+- **Windows**
     ```cmd
     C:\Users\test>python -V
     Python 3.5.4
@@ -147,7 +169,7 @@ Then, we need to verify whether Python 3.5 is installed correctly, and upgrade p
     C:\Users\test>python -m pip install -U pip
     ```
 
-- macOS
+- **macOS**
     ```bash
     MyMac:~ test$ python3.5 -V
     Python 3.5.4
@@ -165,11 +187,13 @@ Please visit [here](https://code.visualstudio.com/docs/languages/python) for mor
 
 ## NumPy and SciPy
 
-NumPy is a general-purpose array-processing package designed to efficiently manipulate large multi-dimensional arrays of arbitrary records without sacrificing too much speed for small multi-dimensional arrays.
-SciPy (pronounced "Sigh Pie") is open-source software for mathematics, science, and engineering, depending on NumPy.
+- **NumPy** is a general-purpose array-processing package designed to efficiently manipulate large multi-dimensional arrays of arbitrary records without sacrificing too much speed for small multi-dimensional arrays.
+
+- **SciPy** (pronounced "Sigh Pie") is open-source software for mathematics, science, and engineering, depending on NumPy.
 
 Because SciPy has no official prebuilt wheel package on Windows, you need to install both NumPy and SciPy from a third party [site](http://www.lfd.uci.edu/~gohlke/pythonlibs/).
 First, download [numpy+mkl](http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy) 1.13.1 and [scipy](http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy) 0.19.1 for Python 3.5 to a local directory.
+
 Then, go to that directory and run the following commands in a terminal:
 ```cmd
 pip3.5 install numpy-1.13.1+mkl-cp35-cp35m-win_amd64.whl
@@ -182,33 +206,14 @@ They will be automatically installed with deep learning frameworks.
 
 ## Microsoft Cognitive Toolkit (CNTK)
 
-The Microsoft Cognitive Toolkit (https://cntk.ai), is a unified deep-learning toolkit that describes neural networks as a series of computational steps via a directed graph.
-CNTK supports both BrainScript and Python programming languages.
+The [Microsoft Cognitive Toolkit](https://cntk.ai) is a unified deep-learning toolkit that describes neural networks as a series of computational steps via a directed graph. CNTK supports both Python and BrainScript programming languages.
 
 > [!NOTE]
 >
 > CNTK currently does not support macOS.
 
-To install CNTK BrainScript package, run the following command in a terminal:
-- Visit [here](https://github.com/Microsoft/CNTK/releases/tag/v2.2) to download the CPU-only or GPU with 1bit-SGD package.
-    > [!NOTE]
-	>
-    > CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD License](https://docs.microsoft.com/en-us/cognitive-toolkit/cntk-1bit-sgd-license) which is MORE restrictive, than the major CNTK License.
-
-- Windows
-    - Decompress the zip file to your home directory, e.g. "C:\Users\test".
-    - Add "C:\Users\test\cntk\cntk" to the %PATH% environment variable.
-    - Install Microsoft MPI from "C:\Users\test\cntk\prerequisites\MSMpiSetup.exe", which is required by CNTK.
-- Linux
-    - Decompress the zip file to your home directory "~/".
-    - Add "~/cntk/cntk/bin" to the $PATH environment variable.
-    - Install OpenMPI by running the following command in a terminal:
-        ```bash
-        sudo apt-get install libopenmpi-dev
-        ```
-
 To install CNTK Python package, run the following command in a terminal:
-- Windows
+- **Windows**
     - With GPU
         ```cmd
         pip3.5 install https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.2-cp35-cp35m-win_amd64.whl
@@ -217,7 +222,7 @@ To install CNTK Python package, run the following command in a terminal:
          ```cmd
         pip3.5 install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.2-cp35-cp35m-win_amd64.whl
         ```
-- Linux
+- **Linux**
     - With GPU
         ```bash
         pip3.5 install https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.2-cp35-cp35m-linux_x86_64.whl
@@ -227,12 +232,32 @@ To install CNTK Python package, run the following command in a terminal:
         pip3.5 install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.2-cp35-cp35m-linux_x86_64.whl
         ```
 
+To install CNTK BrainScript package, run the following command in a terminal:
+- Visit [here](https://github.com/Microsoft/CNTK/releases/tag/v2.2) to download the CPU-only or GPU with 1bit-SGD package.
+    > [!NOTE]
+	>
+    > CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD License](https://docs.microsoft.com/en-us/cognitive-toolkit/cntk-1bit-sgd-license) which is MORE restrictive, than the major CNTK License.
+
+- **Windows**
+    - Decompress the zip file to your home directory, e.g. "C:\Users\test".
+    - Add "C:\Users\test\cntk\cntk" to the %PATH% environment variable.
+    - Install Microsoft MPI from "C:\Users\test\cntk\prerequisites\MSMpiSetup.exe", which is required by CNTK.
+
+- **Linux**
+    - Decompress the zip file to your home directory "~/".
+    - Add "~/cntk/cntk/bin" to the $PATH environment variable.
+    - Install OpenMPI by running the following command in a terminal:
+        ```bash
+        sudo apt-get install libopenmpi-dev
+        ```
+
 
 ## TensorFlow
 
-[TensorFlow](https://www.tensorflow.org/) is an open source software library for numerical computation using data flow graphs.
-Please refer to [here](https://www.tensorflow.org/install/) for detailed installation.
-Briefly, run the following command in a terminal:
+[TensorFlow](https://www.tensorflow.org/) is an open source software library for numerical computation using data flow graphs. Please refer to [here](https://www.tensorflow.org/install/) for detailed installation.
+
+To install TensorFlow
+
 - With GPU
     ```bash
     pip3.5 install tensorflow-gpu==1.3.0
@@ -252,6 +277,7 @@ Briefly, run the following command in a terminal:
 Building on the original Caffe, Caffe2 is designed with expression, speed, and modularity in mind.
 
 Currently, there's no prebuilt Caffe2 python wheel package available.
+
 Please visit [here](https://caffe2.ai/docs/getting-started.html) to build from source code.
 
 ## MXNet
@@ -302,18 +328,21 @@ pip3.5 install Theano==0.9.0
 - Deep Neural Networks built on a tape-based autograd system
 
 To install PyTorch, please run the following command in a terminal:
-- Windows
+
+- **Windows**
     - There is no official wheel package yet. You may download a third-party [Anaconda PyTorch package](https://anaconda.org/peterjc123/pytorch/0.2.1/download/win-64/pytorch-0.2.1-py35h24644ff_0.2.1cu80.tar.bz2).
     - Decompress it to your home directory, e.g. "C:\Users\test\pytorch".
     - Add "C:\Users\test\pytorch\Lib\site-packages" to the %PYTHONPATH% environment variable.
-- macOS
+
+- **macOS**
     ```bash
     pip3.5 install http://download.pytorch.org/whl/torch-0.2.0.post3-cp35-cp35m-macosx_10_7_x86_64.whl
     ```
     > [!NOTE]
 	>
     > macOS binaries dont support CUDA, install from source if CUDA is needed
-- Linux
+
+- **Linux**
     ```bash
     pip3.5 install http://download.pytorch.org/whl/cu80/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl
     ```
@@ -344,19 +373,6 @@ To install Chainer, please run the following command in a terminal:
 ```bash
 pip3.5 install chainer==2.1.0
 ```
- 
-
-# Using
-- First, install [Visual Studio Code](http://code.visualstudio.com/) then install **Tools for AI** extension by pressing **F1** or **ctrl+shift+p** to open command palette, select **Install Extension** and type **tools for AI**. 
-
-# Commands
-The extension provides several commands in the Command Palette for working with deep learning and machine learning:
-- **AI: List Jobs**: View list of recent jobs you've submitted and their details
-- **AI: Open Azure ML Sample Explorer**: Quickly get started with machine learning and deep learning experimentation by downloading sample projects you can run and modify to meet your needs 
-- **AI: Azure ML - Set Subscription**:  Set your Azure Subscription to use for Azure Machine Learning experimentation 
-- **AI: Azure ML - Open Terminal**: Open Azure CLI terminal to access full Azure feature set
-- **AI: Add Platform Configuration**: Configure Azure Machine learning compute target
-
 
 # Support
 Support for this extension is provided on our [GitHub Issue Tracker](http://github.com/Microsoft/vscode-tools-for-ai/issues). You can submit a bug report, a feature suggestion or participate in discussions.
