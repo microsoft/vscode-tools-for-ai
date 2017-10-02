@@ -105,7 +105,7 @@ Before creating deep learning applications, you will need to make sure you have 
 
 > [!NOTE]
 >
-> Software introduction is excerpted from their homepages.
+> The subsequent software introduction is excerpted from their homepages.
 
 ## NVIDIA GPU driver, CUDA and cuDNN
 
@@ -291,14 +291,14 @@ To install MXNet, run the following command in a terminal:
     pip3.5 install mxnet-cu80==0.11.0
     ```
 - Without GPU
-    - Windows
+    - **Windows**
         ```cmd
         pip3.5 install mxnet
         ```
         > [!NOTE]
 		>
         > Stable version 0.11.0 does not have a Windows wheel package, so you may need to install the latest beta version.
-    - non-Windows
+    - **non-Windows**
         ```bash
         pip3.5 install mxnet==0.11.0
         ```
@@ -367,7 +367,9 @@ pip3.5 install cupy
 
 > [!NOTE]
 >
-> On Windows, you need [Visual C++ 2015 Build Tools](http://go.microsoft.com/fwlink/?LinkId=691126&__hstc=268264337.db3b3e714fc37caa42645b589f24066b.1506598067386.1506598067386.1506598067386.1&__hssc=268264337.1.1506598067386&__hsfp=1947375990&fixForIE=.exe) to compile CuPy.
+> On Windows, you need [Microsoft Visual Studio](https://www.visualstudio.com/)
+or [Microsoft Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools)
+to compile CuPy.
 
 To install Chainer, please run the following command in a terminal:
 ```bash
