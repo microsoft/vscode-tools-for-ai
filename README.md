@@ -105,7 +105,7 @@ Before creating deep learning applications, you will need to make sure you have 
 
 > [!NOTE]
 >
-> The subsequent software introduction is excerpted from their homepages.
+> Software introduction in the following subsectons is excerpted from their homepages.
 
 ## NVIDIA GPU driver, CUDA and cuDNN
 
