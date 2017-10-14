@@ -113,7 +113,7 @@ Visual C++ Redistributable installs run-time componets of C Runtime (CRT), Stand
 MFC, C++ AMP, and OpenMP libraries, required by subsequent software on Windows.
 
 Please install the latest **64-bit** Visual C++ 2015 and 2017 Redistributables from
-[here](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
+[here](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
 
 
 ## NVIDIA GPU driver, CUDA and cuDNN
