@@ -107,6 +107,15 @@ Before creating deep learning applications, you will need to make sure you have 
 >
 > Software introduction in the following subsectons is excerpted from their homepages.
 
+## Visual C++ Redistributable for Windows
+
+Visual C++ Redistributable installs run-time componets of C Runtime (CRT), Standard C++,
+MFC, C++ AMP, and OpenMP libraries, required by subsequent software on Windows.
+
+Please install the latest **64-bit** Visual C++ 2015 and 2017 Redistributables from
+[here](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
+
+
 ## NVIDIA GPU driver, CUDA and cuDNN
 
 ### NVIDIA GPU driver
@@ -146,7 +155,8 @@ To install cuDNN
 
 ## Python
 
-Python has been the primary programming language for deep learning applications. 64-bit Python distribution is required, and [Python 3.5.4](https://www.python.org/downloads/release/python-354/) is recommended for the best compatibility.
+Python has been the primary programming language for deep learning applications.
+**64-bit** Python distribution is required, and [Python 3.5.4](https://www.python.org/downloads/release/python-354/) is recommended for the best compatibility.
 
 ### To install Python on Windows
 - We suggest to install the Python launcher for yourself only, and add Python to the %PATH% environment variable.
@@ -254,10 +264,10 @@ To install CNTK BrainScript package, run the following command in a terminal:
 
 ## TensorFlow
 
-[TensorFlow](https://www.tensorflow.org/) is an open source software library for numerical computation using data flow graphs. Please refer to [here](https://www.tensorflow.org/install/) for detailed installation.
+[TensorFlow](https://www.tensorflow.org/) is an open source software library for numerical computation using data flow graphs.
+Please refer to [here](https://www.tensorflow.org/install/) for detailed installation.
 
-To install TensorFlow
-
+To install TensorFlow, run the following command in a terminal:
 - With GPU
     ```bash
     pip3.5 install tensorflow-gpu==1.3.0
@@ -287,21 +297,13 @@ It allows you to **mix** [symbolic and imperative programming](http://mxnet.io/a
 
 To install MXNet, run the following command in a terminal:
 - With GPU
-    ```cmd
+    ```bash
     pip3.5 install mxnet-cu80==0.11.0
     ```
 - Without GPU
-    - **Windows**
-        ```cmd
-        pip3.5 install mxnet
-        ```
-        > [!NOTE]
-		>
-        > Stable version 0.11.0 does not have a Windows wheel package, so you may need to install the latest beta version.
-    - **non-Windows**
-        ```bash
-        pip3.5 install mxnet==0.11.0
-        ```
+    ```bash
+    pip3.5 install mxnet==0.11.0
+    ```
 
 ## Keras
 
