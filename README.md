@@ -143,7 +143,7 @@ To install CUDA
 [cuDNN](https://developer.nvidia.com/cudnn) (CUDA Deep Neural Network library) is a GPU-accelerated library of primitives for deep neural networks by NVIDIA. cuDNN v6 is required by latest deep learning frameworks.
 
 To install cuDNN
-- Visit [here](https://developer.nvidia.com/rdp/cudnn-download) to download and install
+- Visit [here](https://developer.nvidia.com/rdp/cudnn-download) to download and install the latest package.
 - Ensure to add the directory containing cuDNN binary to the %PATH% or $Path environment variable.
 - On Windows, you can copy cudnn64_6.dll to "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin".
 
@@ -160,9 +160,9 @@ Python has been the primary programming language for deep learning applications.
 
 ### To install Python on Windows
 - We suggest to install the Python launcher for yourself only, and add Python to the %PATH% environment variable.
-- Please ensure to install pip which is the package management system used to install and manage software packages written in Python.
+- Please ensure to install pip, which is the package management system to install and manage software packages written in Python.
 
-Deep Learning frameworks rely on pip for their own installation.
+Deep learning frameworks rely on pip for their own installation.
 
 ![install Python on Windows](/media/install_python_win.png)
 
