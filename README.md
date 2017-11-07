@@ -128,7 +128,9 @@ Deep learning frameworks take advantage of NVIDIA GPU to let machines learn at a
 
 ### CUDA
 
-[CUDA](https://developer.nvidia.com/cuda-zone) is a parallel computing platform and programming model invented by NVIDIA. It enables dramatic increases in computing performance by harnessing the power of the GPU. CUDA Toolkit 8.0 is required by deep learning frameworks. 
+[CUDA](https://developer.nvidia.com/cuda-zone) is a parallel computing platform and programming model invented by NVIDIA.
+It enables dramatic increases in computing performance by harnessing the power of the GPU.
+Currently, CUDA Toolkit 8.0 is required by deep learning frameworks.
 
 To install CUDA
 
@@ -200,19 +202,16 @@ Please visit [here](https://code.visualstudio.com/docs/languages/python) for mor
 - **NumPy** is a general-purpose array-processing package designed to efficiently manipulate large multi-dimensional arrays of arbitrary records without sacrificing too much speed for small multi-dimensional arrays.
 
 - **SciPy** (pronounced "Sigh Pie") is open-source software for mathematics, science, and engineering, depending on NumPy.
+Starting from version 1.0.0, SciPy now has official prebuilt wheel package for Windows.
 
-Because SciPy has no official prebuilt wheel package on Windows, you need to install both NumPy and SciPy from a third party [site](http://www.lfd.uci.edu/~gohlke/pythonlibs/).
-First, download [numpy+mkl](http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy) 1.13.1 and [scipy](http://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy) 0.19.1 for Python 3.5 to a local directory.
-
-Then, go to that directory and run the following commands in a terminal:
-```cmd
-pip3.5 install numpy-1.13.1+mkl-cp35-cp35m-win_amd64.whl
-
-pip3.5 install scipy-0.19.1-cp35-cp35m-win_amd64.whl
+To install NumPy and SciPy, run the following command in a terminal:
+```bash
+pip3.5 install -U numpy scipy
 ```
 
-Non-Windows users don't need to install NumPy and SciPy manually.
-They will be automatically installed with deep learning frameworks.
+> [!NOTE]
+>
+> The above command will upgrade existing old or unofficial (e.g. third party packages from http://www.lfd.uci.edu/~gohlke/pythonlibs/ for Windows) NumPy and SciPy to the latest official ones.
 
 ## Microsoft Cognitive Toolkit (CNTK)
 
@@ -298,11 +297,11 @@ It allows you to **mix** [symbolic and imperative programming](http://mxnet.io/a
 To install MXNet, run the following command in a terminal:
 - With GPU
     ```bash
-    pip3.5 install mxnet-cu80==0.11.0
+    pip3.5 install mxnet-cu80==0.12.0
     ```
 - Without GPU
     ```bash
-    pip3.5 install mxnet==0.11.0
+    pip3.5 install mxnet==0.12.0
     ```
 
 ## Keras
@@ -311,7 +310,7 @@ To install MXNet, run the following command in a terminal:
 
 To install Keras, please run the following command in a terminal:
 ```bash
-pip3.5 install Keras==2.0.8
+pip3.5 install Keras==2.0.9
 ```
 
 ## Theano
@@ -369,13 +368,13 @@ pip3.5 install cupy
 
 > [!NOTE]
 >
-> On Windows, you need [Microsoft Visual Studio](https://www.visualstudio.com/)
+> On Windows, you need **2015** version of [Microsoft Visual Studio](https://www.visualstudio.com/)
 or [Microsoft Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools)
-to compile CuPy.
+to compile CuPy with CUDA 8.0.
 
 To install Chainer, please run the following command in a terminal:
 ```bash
-pip3.5 install chainer==2.1.0
+pip3.5 install chainer==3.0.0
 ```
 
 # Support
