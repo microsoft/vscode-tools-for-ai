@@ -135,7 +135,7 @@ Currently, CUDA Toolkit 8.0 is required by deep learning frameworks.
 To install CUDA
 
 - Visit this [site](https://developer.nvidia.com/cuda-80-ga2-download-archive), download CUDA and install it.
-- Make sure to install the CUDA runtime libraries, and then add CUDA binary path to the %PATH% or $Path environment variable.
+- Make sure to install the CUDA runtime libraries, and then add CUDA binary path to the %PATH% or $PATH environment variable.
 - On Windows, this path is "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin" by default.
 
 ![install CUDA on Windows](/media/install_cuda_win.png)
@@ -146,7 +146,7 @@ To install CUDA
 
 To install cuDNN
 - Visit [here](https://developer.nvidia.com/rdp/cudnn-download) to download and install the latest package.
-- Ensure to add the directory containing cuDNN binary to the %PATH% or $Path environment variable.
+- Ensure to add the directory containing cuDNN binary to the %PATH% or $PATH environment variable.
 - On Windows, you can copy cudnn64_6.dll to "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin".
 
 > [!NOTE]
@@ -158,7 +158,7 @@ To install cuDNN
 ## Python
 
 Python has been the primary programming language for deep learning applications.
-**64-bit** Python distribution is required, and [Python 3.5.4](https://www.python.org/downloads/release/python-354/) is recommended for the best compatibility.
+**64-bit** Python distribution is required, and the latest [Python 3.5](https://www.python.org/downloads/release/python-354) is recommended for the best compatibility.
 
 ### To install Python on Windows
 - We suggest to install the Python launcher for yourself only, and add Python to the %PATH% environment variable.
@@ -228,7 +228,7 @@ To install CNTK Python package, run the following command in a terminal:
         pip3.5 install https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.2-cp35-cp35m-win_amd64.whl
         ```
     - Without GPU
-         ```cmd
+        ```cmd
         pip3.5 install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.2-cp35-cp35m-win_amd64.whl
         ```
 - **Linux**
@@ -251,6 +251,7 @@ To install CNTK BrainScript package, run the following command in a terminal:
     - Decompress the zip file to your home directory, e.g. "C:\Users\test".
     - Add "C:\Users\test\cntk\cntk" to the %PATH% environment variable.
     - Install Microsoft MPI from "C:\Users\test\cntk\prerequisites\MSMpiSetup.exe", which is required by CNTK.
+    - Install Microsoft Visual C++ 2015 Redistributable from "C:\Users\test\cntk\prerequisites\VS2015\vc_redist.x64.exe" if it is not installed yet.
 
 - **Linux**
     - Decompress the zip file to your home directory "~/".
@@ -269,11 +270,11 @@ Please refer to [here](https://www.tensorflow.org/install/) for detailed install
 To install TensorFlow, run the following command in a terminal:
 - With GPU
     ```bash
-    pip3.5 install tensorflow-gpu==1.3.0
+    pip3.5 install tensorflow-gpu==1.4.0
     ```
 - Without GPU
     ```bash
-    pip3.5 install tensorflow==1.3.0
+    pip3.5 install tensorflow==1.4.0
     ```
 
 > [!NOTE]
