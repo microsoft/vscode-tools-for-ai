@@ -10,7 +10,7 @@ VS Code Tools for AI is a cross-platform extension that supports deep learning f
 
 Because it's an IDE we've enabled familiar code editor features like syntax highlighting, IntelliSense (auto-completion) and text auto formatting. You can interactively test your deep learning application in your local environment using step-through debugging on local variables and models. 
 
-![deep learning ide](/media/deeplearning-ide.png)
+![deep learning ide](media/deeplearning-ide.png)
 
 ### Find and share examples via the gallery  
 Visual Studio Code Tools for AI is integrated with Azure Machine Learning to make it easy to browse through a gallery of sample experiments using CNTK, TensorFlow, MMLSpark and more. This makes it easy to learn and share with others. 
@@ -31,7 +31,7 @@ To open the explorer, do as follow:
 3. You get a recommendation for "Machine Learning: Open Azure Machine Learning Samples Explorer", select it and press enter. 
 
 
-![sample explorer](/media/sampleexplorer.png)
+![sample explorer](media/sampleexplorer.png)
 
 ## Creating a new project from the sample explorer 
 You can browse different samples and get more information about them. Let's browse until finding the "Classifying Iris" sample.
@@ -40,30 +40,32 @@ You can browse different samples and get more information about them. Let's brow
 To create a new project based on this sample do the following:
 1. Click install button on the project sample, notice the commands being prompted, walking you through the steps of creating a new project. 
 2. **Enter a name** for the project, for example "Iris".
-3. **Enter a folder** to create your project and press enter. 
-4. **Select an existing workspace** and press enter.
+3. **Select an account**
+4. **Select a workspace** and press enter.
+5. **Select a project folder** to create your project
+
+![project folder](media/SelectProjectFolder.png)
 
 The project will then be created.
 
 > [!TIP]
-> You will need to be logged-in to access your Azure resource. From the embedded terminal enter "az login" and follow the instruction. 
+> You will need to be logged-in to access your Azure resource. Right click the "Azure ML" node in AI EXPLORER and click "AI: Azure ML - Login" to start.
+
+![AzureML Login](media/AzureMLLogin.png)
 
 ## Submitting a job to train your model locally or in the cloud
 Now that the new project is open in Visual Studio Code, you can submit a model training job to your different compute targets (local or VM with docker).
 
 Visual Studio Code Tools for AI provides multiple ways to submit a model training job. 
-1. Context Menu (right click) - **Machine Learning: Submit Job**.
-2. From the command palette: "Machine Learning: Submit Job".
+1. Context Menu (right click) - **AI: Submit Job**.
+2. From the command palette: "AI: Submit Job".
 3. Alternatively, you can run the command directly using Azure CLI, Machine Learning Commands, using the embedded terminal.
 
-![submit job](/media/submitjob.png)
+![submit job](media/submitjob.png)
 
-Open iris_sklearn.py, right click and select **Machine Learning: Submit Job**.
+Open iris_sklearn.py, right click and select **AI: Submit Job**.
 1. Select your platform: "Azure Machine Learning".
 2. Select your run-configuration: "Docker-Python."
-
-> [!NOTE]
-> If it is the first time your submit a job, you receive a message "No Machine Learning configuration found, creating...". A JSON file is opened, save it (**Ctrl+S**).
 
 Once the job is submitted, the embedded-terminal displays the progress of the runs. 
 
@@ -76,7 +78,7 @@ Once the jobs are submitted, you can list the jobs from the run history.
 
 The Job List View opens and displays all the runs and some related information.
 
-![add data source](/media/runhistory-list.png)
+![Job View](media/JobView.png)
 
 To view the results of a job, click on the **job ID** link to see detailed information. 
 
@@ -115,7 +117,6 @@ The [Microsoft Enterprise and Developer Privacy Statement] describes the privacy
 This extension is subject to the terms of the [End User License Agreement](https://www.visualstudio.com/license-terms/mlt552233/). 
 
 [Microsoft Enterprise and Developer Privacy Statement]:https://go.microsoft.com/fwlink/?LinkId=786907&lang=en7
-[licensed under the MIT License]: /LICENSE
 [Microsoft Open Source Code of Conduct]:https://opensource.microsoft.com/codeofconduct/
 [Code of Conduct FAQ]:https://opensource.microsoft.com/codeofconduct/faq/
 [opencode@microsoft.com]:mailto:opencode@microsoft.com
