@@ -28,7 +28,7 @@ Visual Studio Code Tools for AI comes with a Sample Explorer via integration wit
 To open the explorer, do as follow:   
 1. Open the command palette (View > **Command Palette** or **Ctrl+Shift+P**).
 2. Enter "ML Sample". 
-3. You get a recommendation for "Machine Learning: Open Azure Machine Learning Samples Explorer", select it and press enter. 
+3. You get a recommendation for "AI: Open Azure ML Sample Explorer", select it and press enter. 
 
 
 ![sample explorer](media/sampleexplorer.png)
