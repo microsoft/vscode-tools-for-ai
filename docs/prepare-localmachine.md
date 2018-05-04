@@ -88,53 +88,34 @@ Suppose Python 3.5 is installed, please execute the following commands in a term
     test@MyLinux:~$ sudo python3 -m pip install -U pip
     ```
 
-## Working with Python in Visual Studio on Windows
-
-[Visual Studio](https://www.visualstudio.com/vs/) is a fully-featured IDE with unparalleled productivity for any dev, any app, and any platform.
-
-Visual Studio provides [open-source](https://github.com/Microsoft/ptvs) support for the Python language through the Python development and Data Science workloads (Visual Studio 2017) and the free Python Tools for Visual Studio extension (Visual Studio 2015 and earlier).
-Learn more about [Working with Python in Visual Studio](https://docs.microsoft.com/en-us/visualstudio/python/python-in-visual-studio) for more details.
-
-### Visual Studio 2017
-
-If you are students, open-source or individual developers, you can download a free copy of [Visual Studio Community 2017](https://www.visualstudio.com/vs/community/).
-
-When Visual Studio 2017 installer starts, please choose **Python development** and **.NET desktop development** workloads for Python language and .NET support.
-If you want to scale out deep learning model training and/or inferencing to the Microsoft Azure such as [Azure Machine Learning](https://azure.microsoft.com/en-us/overview/machine-learning/) or [Azure Batch AI](https://azure.microsoft.com/en-us/services/batch-ai/),
-please also choose **Azure development** workload.
-
-Note that a 64-bit Python 3.6 will also be installed by default with Visual Studio 2017.
-If you have installed Python 3.5, please refer to the following "Setting up the default Python environment" subsection.
-
-![Working with Python in Visual Studio 2017](./media/prepare-local-machine/install_python_tools_vs2017.png)
-
-### Visual Studio 2015
-
-When Visual Studio 2015 installer starts, please choose **Custom** type, and then select **Python Tools for Visual Studio**.
-If you want to scale out deep learning model training and/or inferencing to the Microsoft Azure such as [Azure Machine Learning](https://azure.microsoft.com/en-us/overview/machine-learning/) or [Azure Batch AI](https://azure.microsoft.com/en-us/services/batch-ai/),
-please install [Azure SDK](https://go.microsoft.com/fwlink/?LinkId=518003&clcid=0x409).
-
-![Working with Python in Visual Studio 2015](./media/prepare-local-machine/install_python_tools_vs2015.png)
-
-### Setting up the default Python environment
-
-Users need to setup the default Python environment in Visual Studio for AI projects if there are multiple ones.
-E.g. Users install Python 3.5 manually, and Visual Studio 2017 Python development workload installs a 64-bit Python 3.6 automatically.
-Or users create several Anaconda virtual Python environments.
-
-To set the default Python environment globally for Visual Studio, please go to menu ***Tools > Python > Python Environments*** (Visual Studio 2017), or ***Tools > Python Tools > Python Environments*** (Visual Studio 2015).
-Then, select e.g. **Python 3.5 (64 bit)** and click ***Make this the default environment for new projects*** button.
-
-![Setting up the default Python environment](./media/prepare-local-machine/install_python_setup_default.png)
-
 ## Working with Python in Visual Studio Code
-
 Python is fully supported in Visual Studio Code through extensions.
 Please visit [here](https://code.visualstudio.com/docs/languages/python) for more details.
 
+### Setting up the Python interpreter
+Users need to specify the proper Python interpreters for AI projects if there are multiple ones.
+
+To set the default Python environment Visual Studio Code, please open the settings by:
+* Using menu **File > Preferences > Settings** (CTRL + comma)
+
+or :
+
+* Executing command **Preferences: Open User Settings**
+
+Please add a ***python.pythonPath*** setting which points to your preferred Python interpreter.
+
+**USER SETTINGS** is the global setting while **WORKSPACE SETTINGS** only applies to the current workspace. Workspace setting overwrites the user setting.
+
+![Python setting](media/prepare-local-machine/setting-python-interpreter.png)
+
+
+>[!TIP]
+> A quick way to add this setting is to click the Python environment button on status bar. This changes the workspace setting.
+
+![Python quick setting](media/prepare-local-machine/setting-python-interpreter-quick.png)
+
 
 ## One-click installer
-
 Setting up deep learning and machine learning software as well as their dependencies is not an easy task.
 We recommend that you use the [one-click installer](https://github.com/Microsoft/samples-for-ai/#using-a-one-click-installer-to-setup-deep-learning-frameworks)
 ) to install all of them automatically across Windows, macOS and Linux.
