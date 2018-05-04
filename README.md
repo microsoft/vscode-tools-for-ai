@@ -16,10 +16,11 @@ Get started with deep learning using [Microsoft Cognitive Toolkit (CNTK)](http:/
 
 - [Tensorflow + Python](/docs/tensorflow-local.md)
 - [Create AI project from samples gallery](/docs/quickstart-00-project-from-azuremachinelearning-gallery.md)
-- [Training models in the cloud](/docs/quickstart-01-submitting-training-jobs.md)
+- [Train models in the cloud](/docs/quickstart-01-submitting-training-jobs.md)
 - [Manage job history](/docs/quickstart-02-job-view.md)
 - [Manage storage](/docs/quickstart-03-storage-explorer.md)
-- [Train MNIST using TensorFlow in Azure Batch AI](/docs/quickstart-04-train-azure-batchai.md) 
+- [Train models in Azure Batch AI](/docs/quickstart-04-train-azure-batchai.md) 
+- [Train models in PAI](/docs/quickstart-05-pai.md) 
 
 ## Supported Operating Systems
 Currently this extension supports the following 64-bit operating systems:

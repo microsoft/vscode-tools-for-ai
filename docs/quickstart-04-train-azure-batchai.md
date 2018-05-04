@@ -54,7 +54,7 @@ Suppose you already have an AI project. Open it in VS Code.
 
 > [!TIP]
 > [Samples for AI](https://github.com/Microsoft/samples-for-ai) might be a good start point. 
-> Clone the sample projects from `https://github.com/Microsoft/samples-for-ai`
+> Clone the sample projects from `https://github.com/Microsoft/samples-for-ai.git`
 
 You can run/debug the python code locally. You can also submit training jobs to different compute targets.
 
