@@ -40,36 +40,42 @@ Visual Studio Code Tools for AI is integrated with Azure Machine Learning to mak
 
 [Learn more about creating projects from the sample gallery](/docs/quickstart-00-project-from-azuremachinelearning-gallery.md)
 
-![sample explorer](/docs/media/sampleexplorer.png)
+![sample explorer](/docs/media/aml-samples/sampleexplorer.png)
 
 ### Scale out deep learning model training and/or inferencing to the cloud
 This extension makes it easy to train models on your local computer or you can submit jobs to the cloud by using our integration with Azure Machine Learning. You can submit jobs to different compute targets like Spark clusters, Azure GPU virtual machines and more. Besides, [Azure Batch](https://azure.microsoft.com/en-us/services/batch/) and [Open Platform for AI (PAI)](https://github.com/Microsoft/pai) are also supported.
 
 [Learn more about training models in the cloud](/docs/quickstart-01-submitting-training-jobs.md)
  
-![submit job](/docs/media/submitjob_targets.png)
+![submit job](/docs/media/job/submit-target.png)
 
 ### View recent job performance and details
 Once the jobs are submitted, you can list the jobs, check the job details and download models, logs, etc. from the run history.
 
 [Learn more about job history](/docs/quickstart-02-job-view.md)
 
-![Job View](/docs/media/JobView.png)
+![Job View](/docs/media/job/job-view.png)
 
 ### Manage storage on compute targets
 The extension provides a storage explorer which enables you to manage your files on remote machines, Azure Batch clusters, PAI clusters, etc. You can create/delete folders, upload/download files within the VS Code easily.
 
 [Learn more about storage explorer](/docs/quickstart-03-storage-explorer.md)
 
-![Job View](/docs/media/StorageExplorer.png)
+![Storage View](/docs/media/storage/StorageExplorer.png)
 
 ## Commands
 The extension provides several commands in the Command Palette for working with deep learning and machine learning:
-- **AI: List Jobs**: View list of recent jobs you've submitted and their details
+- **AI: Azure - Login**:  Login to Azure to access resources used by Azure ML / Azure BatchAI.
+- **AI: Azure - Set Subscription**:  Set your Azure Subscription to use for Azure ML / Azure BatchAI
 - **AI: Open Azure ML Sample Explorer**: Quickly get started with machine learning and deep learning experimentation by downloading sample projects you can run and modify to meet your needs 
-- **AI: Azure ML - Set Subscription**:  Set your Azure Subscription to use for Azure Machine Learning experimentation 
 - **AI: Azure ML - Open Terminal**: Open Azure CLI terminal to access full Azure feature set
-- **AI: Add Platform Configuration**: Configure Azure Machine learning compute target
+- **AI: Add Platform Configuration**: Configure compute target (remote VM, BatchAI cluster, PAI cluster) used for training job.
+- **AI: Edit Platform Configuration**: Modify compute target settings.
+- **AI: Remove Platform Configuration**: Remove a compute target.
+- **AI: Submit Job**: Submit a training job to remote Linux VMs, BatchAI clusters, PAI clusters, etc.
+- **AI: Edit Job Properties**: Modify job settings.
+- **AI: List Jobs**: View list of recent jobs you've submitted and their details
+- **AI: Open Storage Explorer**: View and manage storage on remote compute targets.
 
 ## Support
 Support for this extension is provided on our [GitHub Issue Tracker](http://github.com/Microsoft/vscode-tools-for-ai/issues). You can submit a bug report, a feature suggestion or participate in discussions.
