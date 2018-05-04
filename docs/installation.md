@@ -13,20 +13,31 @@ Please save it as ".vsix" and then install locally.**
 
 ![extensions](./media/installation/extensions.png)
 
-2. Input "ai" to **Search** the extension in marketplace.
+2. **Search** in upper right-hand corner for "Visual Studio Code Tools for AI".
 
 ![extensions](./media/installation/extensions-search.png)
 
-3. Intall the extension and reload.
+3. Click the **Intall** button and after a successful install, you'll see an **Reload** button which will prompt you to restart VS Code to enable the extension.
 
-## From [Visual Studio Code MarketPlace]
-1. Go to [Visual Studio Code MarketPlace] and type "ai" in the search box.
+## Install from [Visual Studio Code MarketPlace]
+1. Go to [Visual Studio Code MarketPlace] and search for "Visual Studio Code Tools for AI" in the search box.
 
 ![extensions](./media/installation/extensions-search-on-marketplace.png)
 
 2. Click **"Visual Studio Code Tools for AI"** item to navigate to the item detail page.
 
-3. Click **"Download Extension"** to download the extension package to your local disk.
+3. Click **Install**, a dialog will pop up to confirm whether VS Code is installed, install VS Code if you do not have it installed.
+
+![extensions](./media/installation/marketplace-install.png)
+
+4. Visual Studio Code Tools for AI extension page will be load after step 3. Click the **Intall** button and after a successful install, you'll see an **Reload** button which will prompt you to restart VS Code to enable the extension.
+
+
+## Download Extensions and Install Later from [Visual Studio Code MarketPlace]
+If you are in a slow network connection, and would like to install the extension later. You can try the following steps.
+1. Go to [Visual Studio Code MarketPlace] and search for "Visual Studio Code Tools for AI" in the search box.
+
+2. Click **"Download Extension"** to download the extension package to your local disk.
 
 ![extensions](./media/installation/extensions-download.png)
 
