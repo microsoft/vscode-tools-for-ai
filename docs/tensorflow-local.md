@@ -1,4 +1,3 @@
-
 # Train a TensorFlow model locally 
 
 In this quickstart, we will run a TensorFlow model with the [MNIST](http://yann.lecun.com/exdb/mnist/) dataset locally in AI Tools. 
@@ -32,22 +31,22 @@ pip install numpy scipy
 ### Download sample code
 Download this [GitHub repository](https://github.com/Microsoft/samples-for-ai) containing samples for getting started with deep learning across TensorFlow, CNTK, Theano and more. 
 
-## Open solution and train model 
+## Open a project and train model 
 
-- Launch Visual Studio and select **File > Open > Project/Solution**.
+- Launch Visual Studio Code and select ***File > Open Folder*** (Ctrl+K Ctrl+Of)
+- Select the ***examples\tensorflow\MNIST*** subfolder from your local samples repository.
 
-- Select the **examples\tensorflow** subfolder from the samples repository dowloaded and open the **TensorflowExamples.sln** file.
+    ![Project Folder](./media/tensorflow/project-folder.png)
 
-![Open folder](./media/tensorflow-local/open-folder.png)
+- Open `convolutional.py` and press **F5** to start.
 
-![Open solution](./media/tensorflow-local/open-solution.png)
+    The output will be printed in the terminal window.
 
-- Find the MNIST Project in the **Solution Explorer**, right click and select **Set as StartUp Project**.
+    ![Sample output from console](./media/tensorflow/project-local-run.png)
+    
+> [!TIP]
+> Make sure you've selected correct python environment which has necessary packages (tensorFlow, NumPy, SciPy, etc.) installed.</br>
+> Use command ***Python: Select Interpreer*** to select proper Python interpreter. Refers to [Setting Up Python Interpreter](prepare-localmachine.md#Setting-up-the-Python-interpreter) for detailed information.
 
-- Click **Start**. 
-
-- The output will be printed in the console.
-
-![Sample output from console](./media/tensorflow-local/console-output.png)
-
-> [Train a TensorFlow model in the cloud](tensorflow-vm.md)
+## See Also
+* [Train a TensorFlow model in the cloud](tensorflow-vm.md)

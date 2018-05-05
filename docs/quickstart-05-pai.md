@@ -1,50 +1,61 @@
+# Training AI models in PAI
+
 [PAI(Platform for AI)](https://github.com/Microsoft/pai) is a cluster management tool and resource scheduling platform, jointly designed and developed by Microsoft Research (MSR) and Microsoft Search Technology Center (STC). The platform incorporates some mature design that has a proven track record in large scale Microsoft production environment, and is tailored primarily for academic and research purpose.
 
-## Add a PAI cluster <a id="pai_add"></a>
-To add a PAI cluster, right click PAI node and select "Add Cluster…". Users need to provide cluster display name, cluster IP address, user name and password. 
+## Add a PAI cluster
+To add a PAI cluster, right click **PAI - Clusters** node and select ***Add Configuration***.
 
-   ![Add a PAI cluster](./media/pai/add-cluster.png)
+![Add a PAI cluster](./media/pai/add-cluster-context-menu.png)
 
-## Job Submission to a PAI cluster <a id="pai_submit"></a>
-To submit a job to PAI cluster, right click on the project node in Solution Explorer and select "Submit Job" menu.
+Command **AI: Add Platform Configuration** can also be used. Execute this command in **Command Palette** (Ctrl+Shift+P) and then select a config provider:
 
-   ![Job submission to a PAI cluster](./media/pai/job-submission.png)
+![Add a PAI cluster](./media/pai/add-cluster-command-palette.png)
 
-In the submission window:
+A configuration file is created and opened in editor window for review.
+```json
+{
+    "username": "username",
+    "password": "password",
+    "rest_server_uri": "10.0.3.9:9186",
+    "webhdfs_uri": "10.0.3.9:50070",
+    "grafana_uri": "10.0.3.9:3000",
+    "k8s_dashboard_uri": "10.0.3.9:9090"
+}
+```
+Click **Finish** to add a configuration.
 
-1.  In the list of "Cluster to use", users select a target PAI cluster.
+![Add a PAI cluster](./media/pai/add-cluster-configuration.png)
 
-1.  The "Startup script" is your entry point script path relative to your project directory.
+## Submit training jobs to a PAI cluster
+For detailed guide about general submitting steps, please refer to [Submitting Jobs](./quickstart-01-submitting-training-jobs.md) 
 
-1.  The "Job Name" allows users to enter a name for this job to show it up in the cluster targeted. It needs to be unique.
+Right click the PAI cluster node in **AI EXPLORER** and select ***AI: Submit Job***
 
-1.  Users are required to provide a docker image name in image textbox, which is used to run docker containers in the job.
+![Job submission to a PAI cluster](./media/pai/submit-job-ai-explorer.png)
 
+A QuickPick window pops up. Please choose whether to upload script automatically or not:
 
-Task Roles:
-1.  The "name" is the name for the task role, need to be unique with other roles.
-1.  The "TaskNumber" is the number of tasks for the task role, no less than 1.
-1.  The "CpuNumber" is CPU number for one task in the task role, no less than 1.
-1.  The "MemoryMB" is memory(MB) for one task in the task role, no less than 100.
-1.  The "GpuNumber" is GPU number for one task in the task role, no less than 0.
-1.  The "Command" is the executable command for tasks in the task role, can not be empty.
+![Job submission to a PAI cluster](./media/pai/submit-job-auto-upload.png)
 
-    ![Config PAI task roles](./media/pai/task-role.png)
+> [!NOTE]
+> For PAI and BatchAI clusters, users can store their scripts and data in cloud storage and specify the path in job properties. In this case, please select **No**.
 
-Optional Parameters:
+A new ai-job-properties.json file is then created and opened in editor window for review.
 
-1.  The "authFile" is Docker registry authentication file existing on HDFS. It's optional.
+![Job submission to a PAI cluster](./media/pai/submit-job-confirm-properties.png)
 
-1.  The "dataDir" is the data directory existing on HDFS, used for storing job input data on HDFS. It's optional.
+In ***ai-job-properties.json***, PAI-specific job properties are under `platform.PAI.jobConfig`:
+```json
+    "platform": {
+        "PAI": {
+            "jobConfig": {
+                "jobName": "iris_sklearn_43f7f1a7",
+                "image": "aiplatform/pai.build.base",
+```
 
-1.  The "outputDir" is the output directory on HDFS, used for storing job output files on HDFS. It's optional.
+For detailed information about PAI job properties, please refer to the [PAI Job Tutorial](https://github.com/Microsoft/pai/tree/master/job-tutorial)
 
-1.  The "codeDir" is the code directory on HDFS, used for storing user's training code files on HDFS. It's optional.
+Click ***Finish*** button to submit the job.
 
-1.  The "gpuType" specifies the GPU type to be used in the tasks. If omitted, the job will run on any gpu type. It's optional.
-
-1.  The "killAllOnCompletedTaskNumber" is the number of completed tasks to kill the entire job, no less than 0. It's optional.
-
-1.  The "retryCount" is job retry count if submitting job to PAI scheduler fails, no less than 0. It's optional.
-
-    ![PAI job optional parameters.](./media/pai/optional-param.png)
+## Check the job status and download its assets
+Now the job has been submitted to target PAI cluster. You can check the job status and download its assets via [Job View](quickstart-02-job-view.md). Meanwhile [Storage Explorer](quickstart-03-storage-explorer.md) is also a good place to access the job assets.

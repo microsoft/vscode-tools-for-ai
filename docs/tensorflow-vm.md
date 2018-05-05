@@ -10,7 +10,7 @@ Before you begin, ensure you have the following installed and configured:
 Download this [GitHub repository](https://github.com/Microsoft/samples-for-ai) containing samples for getting started with deep learning across TensorFlow, CNTK, Theano and more.
 
 ### Setup Azure Deep Learning Virtual Machine
-Please read instructions for [setting up Deep Learning Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm). 
+Please read instructions for [Setting up Deep Learning Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm). 
 
 > [!NOTE] 
 > Set **Location** to US West 2 (or others which have Deep Learning VM) and **OS type** as Linux.
@@ -22,41 +22,38 @@ Login to your Deep Learning VM using a tool like Putty or similar. Execute below
 echo -e ". /etc/profile\n$(cat ~/.bashrc)" > ~/.bashrc
 ``` 
 
-## Open project
+## Open a project
 
-- Launch Visual Studio and select **File > Open > Project/Solution**.
+- Launch Visual Studio Code and select ***File > Open Folder*** (Ctrl+K Ctrl+Of)
+- Select the ***examples\tensorflow\MNIST*** subfolder from your local samples repository.
 
-- Select the **examples\tensorflow** folder from the samples repository downloaded  
+    ![Project Folder](./media/tensorflow/project-folder.png)
 
-![Open project](./media/tensorflow-local/open-folder.png)
+## Add an Azure Remote VM
 
-- Open the **TensorflowExamples.sln** file.
+Right click the **Remote Linux** node in **AI EXPLORER** and select ***Add Configuration***. You can also use command ***AI: Add Platform Configuration*** in command palette.
 
-![Open solution](./media/tensorflow-local/open-solution.png)
+A new ***ai_linux_new_config.json*** is created and opened in editor window for review. Besides host, port and username, either a password or a private key file is required.
 
-## Add Azure Remote VM
+![Add a new remote machine](./media/tensorflow/add-remote-vm.png)
 
-In Server Explorer, right click the **Remote Machines** node under the AI Tools node and select "Add…". Enter the Remote Machine display name, IP host, SSH port, user name and password/key file. 
+## Submit a job to Azure VM
+For detailed guide about general submitting steps, please refer to [Submitting Jobs](./quickstart-01-submitting-training-jobs.md) 
 
-![Add a new remote machine](./media/tensorflow-vm/add-remote-vm.png)
+- Open `convolutional.py`
+- Right click the Azure VM Node in **AI EXPLORER** and select ***AI: Submit Job***
 
-## Submit job to Azure VM
-Right click on MNIST project in **Solution Explorer** and select **Submit Job**.
+    ![Job submission to a remote machine](./media/tensorflow/project-submit-job.png)
 
-![Job submission to a remote machine](./media/tensorflow-vm/job-submission.png)
+- Review and make necessary modification in created ai_job_properties.json and then click ***Finish*** button to submit the job.
 
-In the submission window:
+    ![Job submission to a remote machine](./media/tensorflow/job-properties.png)
 
-- In the list of **Cluster to use**, select the remote machine (with "rm:" prefix) to submit the job to.
 
-- Enter a **Job name**. 
+## Check the job status and download its assets
+To check the status and detail of the job and download its assets, please use [Job View](quickstart-02-job-view.md).
 
-- Click **Submit**. 
-
-## Check status of job 
-To see status and details of jobs: expand the virtual machine you submitted the job to in the **Server Explorer**. Double click on **Jobs**.
-
-![Job browser](./media/tensorflow-vm/job-browser.png)
+[Storage Explorer](quickstart-03-storage-explorer.md) is also a good place to access the job assets.
 
 ## Clean up resources (optional)
 
