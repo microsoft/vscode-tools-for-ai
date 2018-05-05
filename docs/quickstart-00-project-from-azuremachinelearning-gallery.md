@@ -1,4 +1,4 @@
-# Creating project from Azure Marchine Learning Gallery
+# Quickstart: create an AI project from Azure Marchine Learning Gallery in Visual Studio Code
 
 ## Exploring project samples
 Visual Studio Code Tools for AI comes with a Sample Explorer via integration with Azure Machine Learning. The Sample Explorer makes it easy to discover samples and try them with only a few clicks. 
