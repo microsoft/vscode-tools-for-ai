@@ -70,9 +70,9 @@ The extension provides several commands in the Command Palette for working with 
 - **AI: Azure - Set Subscription**:  Set your Azure Subscription to use for Azure ML / Azure BatchAI
 - **AI: Open Azure ML Sample Explorer**: Quickly get started with machine learning and deep learning experimentation by downloading sample projects you can run and modify to meet your needs 
 - **AI: Azure ML - Open Terminal**: Open Azure CLI terminal to access full Azure feature set
-- **AI: Add Platform Configuration**: Configure compute target (remote VM, BatchAI cluster, PAI cluster) used for training job.
+- **AI: Add Platform Configuration**: Configure compute target (remote VM, BatchAI cluster, PAI cluster) used for training job. **For BatchAI, this command creates a cluster in Azure**.
 - **AI: Edit Platform Configuration**: Modify compute target settings.
-- **AI: Remove Platform Configuration**: Remove a compute target.
+- **AI: Remove Platform Configuration**: Remove a compute target configuration. **For BatchAI, this command removes the cluster in Azure**.
 - **AI: Submit Job**: Submit a training job to remote Linux VMs, BatchAI clusters, PAI clusters, etc.
 - **AI: Edit Job Properties**: Modify job settings.
 - **AI: List Jobs**: View list of recent jobs you've submitted and their details

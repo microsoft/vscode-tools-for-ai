@@ -90,7 +90,7 @@ Suppose Python 3.5 is installed, please execute the following commands in a term
 
 ## Working with Python in Visual Studio Code
 Python is fully supported in Visual Studio Code through extensions.
-Please visit [here](https://code.visualstudio.com/docs/languages/python) for more details.
+Please visit [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python) for more details.
 
 ### Setting up the Python interpreter
 Users need to specify the proper Python interpreters for AI projects if there are multiple ones.
