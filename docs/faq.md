@@ -4,7 +4,7 @@
 
 ## Prepare development environment
 
-### **Q: Python may not be installed on Windows Server OS.**
+### **Q: How come I can not install Python on Windows Server OS?**
 After downloading the Python installer to a local directory, right-click it and select ***Run as administrator***.
 We recommend that you install Python to %LocalAppData%.
 
