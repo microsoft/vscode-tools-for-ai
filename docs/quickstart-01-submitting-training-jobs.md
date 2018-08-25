@@ -48,4 +48,18 @@ to VS Code User Settings (CTRL+comma).
 > Before you submitting the job, please open a python script file which will be used as startup script.
 > You can confirm/change the start script setting later by editing the job property file.
 
-Once the job is submitted, the embedded-terminal displays the progress of the runs. 
+Once the job is submitted, the embedded-terminal displays the progress of the runs.
+
+## Submitting Job with Docker when using Linux VM
+
+When submitting job to linux VM, we could use docker to run the job by editing the `ai_job_properties.json`.
+
+![Docker Options](./media/job/submitting-with-docker.png)
+
+Please make sure the docker is installed and well-prepared on your Linux VM.
+
+We provide some candidate docker image for you to choose, you may set `"userRoot": true` to avoid unexpected errors. You may also use your own dokcer image.
+
+Please make sure the `type` is consistent with the `image`, use `"type": "NvidiaDocker"` if it's a docker image with NVIDIA GPU.
+
+If the docker image does not exist on your Linux VM, it will pull the docker image from remote. Please make sure the network is available and be patient.

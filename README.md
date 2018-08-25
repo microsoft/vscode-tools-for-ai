@@ -7,10 +7,14 @@ Get started with deep learning using [Microsoft Cognitive Toolkit (CNTK)](http:/
 
 **Getting Started**
 
+- [Release Notes](/docs/releasenotes.md)
 - [Installation](/docs/installation.md)
+- [Start Page](/docs/startPage.md)
 - [Prepare development environment](/docs/prepare-localmachine.md)
 - [Deep learning sample recipes](https://github.com/Microsoft/samples-for-ai)
+- [View Deep learning document in VS Code](/docs/docviewer.md)
 - [Frequently Asked Questions](/docs/faq.md)
+- [Feedback](/docs/feedback.md)
 
 **Quickstarts**
 
@@ -21,6 +25,8 @@ Get started with deep learning using [Microsoft Cognitive Toolkit (CNTK)](http:/
 - [Manage storage](/docs/quickstart-03-storage-explorer.md)
 - [Train models in Azure Batch AI](/docs/quickstart-04-train-azure-batchai.md) 
 - [Train models in PAI](/docs/quickstart-05-pai.md) 
+- [Open jupyter notebooks in VS Code](/docs/quickstart-06-jupyter.md)
+- [Open Tensorboard Locally in VS Code](/docs/quickstart-07-tensorboard.md)
 
 ## Supported Operating Systems
 Currently this extension supports the following 64-bit operating systems:
@@ -35,6 +41,12 @@ VS Code Tools for AI is a cross-platform extension that supports deep learning f
 Because it's an IDE we've enabled familiar code editor features like syntax highlighting, IntelliSense (auto-completion) and text auto formatting. You can interactively test your deep learning application in your local environment using step-through debugging on local variables and models. 
 
 ![deep learning ide](/docs/media/deeplearning-ide.png)
+
+### View deep learning document in VS Code
+VS Code Tools for AI is shipped with document for some common deep learning frameworks. You can manage and browse the document in VS Code and search for API reference in editor window through simple command.
+
+![doc viewer](/docs/media/docviewer/docviewer.png)
+
 
 ### Find and share examples via the gallery  
 Visual Studio Code Tools for AI is integrated with Azure Machine Learning to make it easy to browse through a gallery of sample experiments using CNTK, TensorFlow, MMLSpark and more. This makes it easy to learn and share with others. 
@@ -64,6 +76,21 @@ The extension provides a storage explorer which enables you to manage your files
 
 ![Storage View](/docs/media/storage/StorageExplorer.png)
 
+### Jupyter notebook server manager
+The extension implements a built-in jupyter server notebook server manager, which enables you to open a jupyter notebook inside VS Code for viewing and editing.
+
+[Learn more about jupyter notebook in VS Code](/docs/quickstart-06-jupyter.md)
+
+![Jupyter View](/docs/media/jupyter/jupyter_webview.png)
+
+### Open tensorboard locally in VS Code
+
+The extension enables you to start a tensorboard in VS Code and view the model graph in an external browser. You could shutdown the tensorboard server anytime in the VS Code terminal.
+
+[Learn more about tensorboard](/docs/quickstart-07-tensorboard.md)
+
+![Tensorboard View](/docs/media/tensorboard/tensorboard_browser.png)
+
 ## Commands
 The extension provides several commands in the Command Palette for working with deep learning and machine learning:
 - **AI: Azure - Login**:  Login to Azure to access resources used by Azure ML / Azure BatchAI.
@@ -77,6 +104,7 @@ The extension provides several commands in the Command Palette for working with 
 - **AI: Edit Job Properties**: Modify job settings.
 - **AI: List Jobs**: View list of recent jobs you've submitted and their details
 - **AI: Open Storage Explorer**: View and manage storage on remote compute targets.
+- **AI: Local - Open Tensorboard**: Open tensorboard locally.
 
 ## Support
 Support for this extension is provided on our [GitHub Issue Tracker](http://github.com/Microsoft/vscode-tools-for-ai/issues). You can submit a bug report, a feature suggestion or participate in discussions.
