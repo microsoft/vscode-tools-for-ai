@@ -4,11 +4,11 @@ If you have any issues, questions or suggestions, you have two approaches to con
 ### 1. AI Explorer
 
 - Expand AI Explorer view on the bottom left of VS Code Explorer View.
-- Hover the mouse over the title bar of AI Explorer, and click the "Report issue on github" button
+- Hover the mouse over the title bar of AI Explorer, and click the "Report issue on GitHub" button
 
   ![ai-explorer](/docs/media/feedback/ai-explorer.png)
 
--  A browser window will pop up and navigate to [Github Site](https://github.com/Microsoft/vscode-tools-for-ai/issues/new)
+-  A browser window will pop up and navigate to [GitHub Site](https://github.com/Microsoft/vscode-tools-for-ai/issues/new)
 
   ![github-new-issue](/docs/media/feedback/github-new-issue.png)
 

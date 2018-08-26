@@ -24,7 +24,7 @@ Get started with deep learning using [Microsoft Cognitive Toolkit (CNTK)](http:/
 - [Manage job history](/docs/quickstart-02-job-view.md)
 - [Manage storage](/docs/quickstart-03-storage-explorer.md)
 - [Train models in PAI](/docs/quickstart-05-pai.md) 
-- [Open jupyter notebooks in VS Code](/docs/quickstart-06-jupyter.md)
+- [Open Jupyter notebooks in VS Code](/docs/quickstart-06-jupyter.md)
 - [Run TensorBoard locally in VS Code](/docs/quickstart-07-tensorboard.md)
 
 ## Supported Operating Systems
@@ -76,9 +76,9 @@ The extension provides a storage explorer which enables you to manage your files
 ![Storage View](/docs/media/storage/StorageExplorer.png)
 
 ### Jupyter notebook server manager
-The extension implements a built-in jupyter server notebook server manager, which enables you to open a jupyter notebook inside VS Code for viewing and editing.
+The extension implements a built-in Jupyter server notebook server manager, which enables you to open a Jupyter notebook inside VS Code for viewing and editing.
 
-[Learn more about jupyter notebook in VS Code](/docs/quickstart-06-jupyter.md)
+[Learn more about Jupyter notebook in VS Code](/docs/quickstart-06-jupyter.md)
 
 ![Jupyter View](/docs/media/jupyter/jupyter_webview.png)
 

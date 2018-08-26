@@ -1,10 +1,10 @@
-# Open tensorboard locally in vscode
+# Run TensorBoard locally in VS Code
 
 In this quickstart, we will run a tensorboard service locally in AI Tools and view the model graph. 
 
 ## Prerequisites
 
-Before you begin, ensure you [set python path properly in vscode properly](https://code.visualstudio.com/docs/python/environments) and have already installed following packages in python:
+Before you begin, ensure you [set Python path properly in VS Code properly](https://code.visualstudio.com/docs/python/environments) and have already installed following packages in Python:
 
 ### Google TensorFlow 
 
@@ -20,18 +20,18 @@ or if you have an Nvidia GPU
 pip install tensorflow-gpu
 ```
 
-For more info, please refer to [official tensorflow doc](https://www.tensorflow.org/install/). The tensorboard is contained in tensorflow package, so you don't need to install tensorboard seperately.
+For more info, please refer to [official TensorFlow doc](https://www.tensorflow.org/install/). The TensorBoard is contained in TensorFlow package, so you don't need to install TensorBoard seperately.
 
-### Write the log data when you training a tensorflow job.
+### Write the log data when you training a TensorFlow job.
 
-Use ```tf.summary``` module to collect data from your training job. Here is [an example project](https://github.com/tensorflow/tensorflow/blob/r1.10/tensorflow/examples/tutorials/mnist/mnist_with_summaries.py) from tensorboard official guide.
+Use ```tf.summary``` module to collect data from your training job. Here is [an example project](https://github.com/tensorflow/tensorflow/blob/r1.10/tensorflow/examples/tutorials/mnist/mnist_with_summaries.py) from TensorBoard official guide.
 
 
-## Select the log directory and start tensorboard from vscode command palette. 
+## Select the log directory and start TensorBoard from VS Code command palette. 
 
-- Open command palette from vscode by pressing Ctrl+Shift+P.
+- Open command palette from VS Code by pressing Ctrl+Shift+P.
 
-- Select **"AI: Local - Open Tensorboard"** command
+- Select **"AI: Local - Run TensorBoard"** command
 
 ![Command Palette](./media/tensorboard/tensorboard_commandPalette.png)
 
@@ -39,6 +39,6 @@ Use ```tf.summary``` module to collect data from your training job. Here is [an 
 
 ![select log directory](./media/tensorboard/tensorboard_window.png)
 
-- After selecting the log directory, a tensorboard server will start in the vscode terminal and represent the model graph in an external browser. 
+- After selecting the log directory, a TensorBoard server will start in the VS Code terminal and represent the model graph in an external browser. 
 
 ![show tensorboard in browser](./media/tensorboard/tensorboard_browser.png)
