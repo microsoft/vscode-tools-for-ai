@@ -7,5 +7,5 @@
 -	Built-in documentation search for TensorFlow / Keras / PyTorch APIs. Right-click the function name, and select “Search in Documentation Viewer” context menu.
 -	Docker image list is updated for job submission to remote machines. And a new [all-in-one docker image](https://hub.docker.com/r/toolsforai/all-in-one/) including all popular AI / DL frameworks is provided.
 -	A more proactive feedback channel is built - will prompt user to give feedback when some conditions met.
--	Azure Batch AI support is temporarily removed, will get the support of Batch AI back soon together with new AML release. 
+-	Azure Batch AI support is temporarily removed, will get the support of Batch AI back soon. 
 -	Telemetry and stability improvement.
