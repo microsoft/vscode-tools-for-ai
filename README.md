@@ -7,26 +7,25 @@ Get started with deep learning using [Microsoft Cognitive Toolkit (CNTK)](http:/
 
 **Getting Started**
 
-- [Release Notes](/docs/releasenotes.md)
+- [Release notes](/docs/releasenotes.md)
 - [Installation](/docs/installation.md)
-- [Start Page](/docs/startPage.md)
+- [Start page](/docs/startPage.md)
 - [Prepare development environment](/docs/prepare-localmachine.md)
 - [Deep learning sample recipes](https://github.com/Microsoft/samples-for-ai)
-- [View Deep learning document in VS Code](/docs/docviewer.md)
+- [View deep learning document in VS Code](/docs/docviewer.md)
 - [Frequently Asked Questions](/docs/faq.md)
 - [Feedback](/docs/feedback.md)
 
 **Quickstarts**
 
-- [Tensorflow + Python](/docs/tensorflow-local.md)
+- [TensorFlow + Python](/docs/tensorflow-local.md)
 - [Create AI project from samples gallery](/docs/quickstart-00-project-from-azuremachinelearning-gallery.md)
 - [Train models in the cloud](/docs/quickstart-01-submitting-training-jobs.md)
 - [Manage job history](/docs/quickstart-02-job-view.md)
 - [Manage storage](/docs/quickstart-03-storage-explorer.md)
-- [Train models in Azure Batch AI](/docs/quickstart-04-train-azure-batchai.md) 
 - [Train models in PAI](/docs/quickstart-05-pai.md) 
 - [Open jupyter notebooks in VS Code](/docs/quickstart-06-jupyter.md)
-- [Open Tensorboard Locally in VS Code](/docs/quickstart-07-tensorboard.md)
+- [Run TensorBoard locally in VS Code](/docs/quickstart-07-tensorboard.md)
 
 ## Supported Operating Systems
 Currently this extension supports the following 64-bit operating systems:
@@ -56,7 +55,7 @@ Visual Studio Code Tools for AI is integrated with Azure Machine Learning to mak
 ![sample explorer](/docs/media/aml-samples/sampleexplorer.png)
 
 ### Scale out deep learning model training and/or inferencing to the cloud
-This extension makes it easy to train models on your local computer or you can submit jobs to the cloud by using our integration with Azure Machine Learning. You can submit jobs to different compute targets like Spark clusters, Azure GPU virtual machines and more. Besides, [Azure Batch](https://azure.microsoft.com/en-us/services/batch/) and [Open Platform for AI (PAI)](https://github.com/Microsoft/pai) are also supported.
+This extension makes it easy to train models on your local computer or you can submit jobs to the cloud by using our integration with Azure Machine Learning. You can submit jobs to different compute targets like Spark clusters, Azure GPU virtual machines and more. Besides, [Open Platform for AI (PAI)](https://github.com/Microsoft/pai) is also supported.
 
 [Learn more about training models in the cloud](/docs/quickstart-01-submitting-training-jobs.md)
  
@@ -70,7 +69,7 @@ Once the jobs are submitted, you can list the jobs, check the job details and do
 ![Job View](/docs/media/job/job-view.png)
 
 ### Manage storage on compute targets
-The extension provides a storage explorer which enables you to manage your files on remote machines, Azure Batch clusters, PAI clusters, etc. You can create/delete folders, upload/download files within the VS Code easily.
+The extension provides a storage explorer which enables you to manage your files on remote machines, PAI clusters, etc. You can create/delete folders, upload/download files within the VS Code easily.
 
 [Learn more about storage explorer](/docs/quickstart-03-storage-explorer.md)
 
@@ -83,28 +82,28 @@ The extension implements a built-in jupyter server notebook server manager, whic
 
 ![Jupyter View](/docs/media/jupyter/jupyter_webview.png)
 
-### Open tensorboard locally in VS Code
+### Run TensorBoard locally in VS Code
 
-The extension enables you to start a tensorboard in VS Code and view the model graph in an external browser. You could shutdown the tensorboard server anytime in the VS Code terminal.
+The extension enables you to run TensorBoard in VS Code and view the model graph in an external browser. You could shutdown the TensorBoard server anytime in the VS Code terminal.
 
-[Learn more about tensorboard](/docs/quickstart-07-tensorboard.md)
+[Learn more about TensorBoard](/docs/quickstart-07-tensorboard.md)
 
-![Tensorboard View](/docs/media/tensorboard/tensorboard_browser.png)
+![TensorBoard View](/docs/media/tensorboard/tensorboard_browser.png)
 
 ## Commands
 The extension provides several commands in the Command Palette for working with deep learning and machine learning:
-- **AI: Azure - Login**:  Login to Azure to access resources used by Azure ML / Azure BatchAI.
-- **AI: Azure - Set Subscription**:  Set your Azure Subscription to use for Azure ML / Azure BatchAI
-- **AI: Open Azure ML Sample Explorer**: Quickly get started with machine learning and deep learning experimentation by downloading sample projects you can run and modify to meet your needs 
-- **AI: Azure ML - Open Terminal**: Open Azure CLI terminal to access full Azure feature set
-- **AI: Add Platform Configuration**: Configure compute target (remote VM, BatchAI cluster, PAI cluster) used for training job. **For BatchAI, this command creates a cluster in Azure**.
+- **AI: Azure - Login**:  Login to Azure to access resources used by Azure ML.
+- **AI: Azure - Set Subscription**:  Set your Azure Subscription to use for Azure ML.
+- **AI: Open Azure ML Sample Explorer**: Quickly get started with machine learning and deep learning experimentation by downloading sample projects you can run and modify to meet your needs.
+- **AI: Azure ML - Open Terminal**: Open Azure ML CLI terminal to access full feature set.
+- **AI: Add Platform Configuration**: Configure compute target (remote VM, PAI cluster) used for training job.
 - **AI: Edit Platform Configuration**: Modify compute target settings.
-- **AI: Remove Platform Configuration**: Remove a compute target configuration. **For BatchAI, this command removes the cluster in Azure**.
-- **AI: Submit Job**: Submit a training job to remote Linux VMs, BatchAI clusters, PAI clusters, etc.
+- **AI: Remove Platform Configuration**: Remove a compute target configuration.
+- **AI: Submit Job**: Submit a training job to remote Linux VMs, PAI clusters etc.
 - **AI: Edit Job Properties**: Modify job settings.
-- **AI: List Jobs**: View list of recent jobs you've submitted and their details
+- **AI: List Jobs**: View list of recent jobs you've submitted and their details.
 - **AI: Open Storage Explorer**: View and manage storage on remote compute targets.
-- **AI: Local - Open Tensorboard**: Open tensorboard locally.
+- **AI: Local - Run TensorBoard**: Run TensorBoard locally.
 
 ## Support
 Support for this extension is provided on our [GitHub Issue Tracker](http://github.com/Microsoft/vscode-tools-for-ai/issues). You can submit a bug report, a feature suggestion or participate in discussions.

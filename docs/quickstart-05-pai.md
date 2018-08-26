@@ -38,7 +38,7 @@ A QuickPick window pops up. Please choose whether to upload script automatically
 ![Job submission to a PAI cluster](./media/pai/submit-job-auto-upload.png)
 
 > [!NOTE]
-> For PAI and BatchAI clusters, users can store their scripts and data in cloud storage and specify the path in job properties. In this case, please select **No**.
+> For PAI clusters, users can store their scripts and data in cloud storage and specify the path in job properties. In this case, please select **No**.
 
 A new ai-job-properties.json file is then created and opened in editor window for review.
 

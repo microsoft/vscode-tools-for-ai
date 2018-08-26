@@ -1,7 +1,7 @@
 # Manage remote storage
 Visual Studio Code Tools for AI comes with a **Storage Explorer**.
 
-You can manage the storage on **BatchAI** clusters, **PAI** clusters and **Remote Linux** VMs within VS Code. Storage Explorer supports creating/deleting/uploading/download files and folders.
+You can manage the storage on **PAI** clusters and **Remote Linux** VMs within VS Code. Storage Explorer supports creating/deleting/uploading/download files and folders.
 
 ![Storage Explorer](media/storage/StorageExplorer.png)
 

@@ -15,7 +15,7 @@ VS Code Tools for AI provides two ways to list job:
 
     > [!TIP]
     > Because of different underlying mechanisms of run history management, the context menu varies according to the node you chose.
-    > For **Azure ML** and **BatchAI**, choose the platform node to see ***List Jobs***. 
+    > For **Azure ML**, choose the platform node to see ***List Jobs***. 
     > For **PAI** and **Remote Linux**, choose the compute target node. Please refer to below screenshot pictures.
     > Similarly, if you execute the command from Command Palette, there is an extra step for **PAI** and **Remote Linux** to select a configuration (compute target).
 
