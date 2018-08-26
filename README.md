@@ -41,6 +41,15 @@ Because it's an IDE we've enabled familiar code editor features like syntax high
 
 ![deep learning ide](/docs/media/deeplearning-ide.png)
 
+### Get started quickly with the Start Page  
+Tools for AI Start Page is built to accelerate your start in AI world with 
+- Easy instructions to guide you to build your first AI application within 3 steps;
+- AI inferencing/training samples and AI related learning materials for you to quickly learn and build your own AI solutions. 
+
+![sample explorer](/docs/media/homepage/startPage.PNG)
+
+[Learn more about Start Page](/docs/startPage.md)  
+
 ### View deep learning document in VS Code
 VS Code Tools for AI is shipped with document for some common deep learning frameworks. You can manage and browse the document in VS Code and search for API reference in editor window through simple command.
 
@@ -52,7 +61,7 @@ Visual Studio Code Tools for AI is integrated with Azure Machine Learning to mak
 
 [Learn more about creating projects from the sample gallery](/docs/quickstart-00-project-from-azuremachinelearning-gallery.md)
 
-![sample explorer](/docs/media/aml-samples/sampleexplorer.png)
+![AML sample explorer](/docs/media/aml-samples/sampleexplorer.png)
 
 ### Scale out deep learning model training and/or inferencing to the cloud
 This extension makes it easy to train models on your local computer or you can submit jobs to the cloud by using our integration with Azure Machine Learning. You can submit jobs to different compute targets like Spark clusters, Azure GPU virtual machines and more. Besides, [Open Platform for AI (PAI)](https://github.com/Microsoft/pai) is also supported.
