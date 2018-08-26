@@ -7,20 +7,25 @@ Get started with deep learning using [Microsoft Cognitive Toolkit (CNTK)](http:/
 
 **Getting Started**
 
+- [Release notes](/docs/releasenotes.md)
 - [Installation](/docs/installation.md)
+- [Start page](/docs/startPage.md)
 - [Prepare development environment](/docs/prepare-localmachine.md)
 - [Deep learning sample recipes](https://github.com/Microsoft/samples-for-ai)
+- [View deep learning document in VS Code](/docs/docviewer.md)
 - [Frequently Asked Questions](/docs/faq.md)
+- [Feedback](/docs/feedback.md)
 
 **Quickstarts**
 
-- [Tensorflow + Python](/docs/tensorflow-local.md)
+- [TensorFlow + Python](/docs/tensorflow-local.md)
 - [Create AI project from samples gallery](/docs/quickstart-00-project-from-azuremachinelearning-gallery.md)
 - [Train models in the cloud](/docs/quickstart-01-submitting-training-jobs.md)
 - [Manage job history](/docs/quickstart-02-job-view.md)
 - [Manage storage](/docs/quickstart-03-storage-explorer.md)
-- [Train models in Azure Batch AI](/docs/quickstart-04-train-azure-batchai.md) 
 - [Train models in PAI](/docs/quickstart-05-pai.md) 
+- [Open Jupyter notebooks in VS Code](/docs/quickstart-06-jupyter.md)
+- [Run TensorBoard locally in VS Code](/docs/quickstart-07-tensorboard.md)
 
 ## Supported Operating Systems
 Currently this extension supports the following 64-bit operating systems:
@@ -36,15 +41,30 @@ Because it's an IDE we've enabled familiar code editor features like syntax high
 
 ![deep learning ide](/docs/media/deeplearning-ide.png)
 
+### Get started quickly with the Start Page  
+Tools for AI Start Page is built to accelerate your start in AI world with 
+- Easy instructions to guide you to build your first AI application within 3 steps;
+- AI inferencing/training samples and AI related learning materials for you to quickly learn and build your own AI solutions. 
+
+![sample explorer](/docs/media/homepage/startPage.PNG)
+
+[Learn more about Start Page](/docs/startPage.md)  
+
+### View deep learning document in VS Code
+VS Code Tools for AI is shipped with document for some common deep learning frameworks. You can manage and browse the document in VS Code and search for API reference in editor window through simple command.
+
+![doc viewer](/docs/media/docviewer/docviewer.png)
+
+
 ### Find and share examples via the gallery  
 Visual Studio Code Tools for AI is integrated with Azure Machine Learning to make it easy to browse through a gallery of sample experiments using CNTK, TensorFlow, MMLSpark and more. This makes it easy to learn and share with others. 
 
 [Learn more about creating projects from the sample gallery](/docs/quickstart-00-project-from-azuremachinelearning-gallery.md)
 
-![sample explorer](/docs/media/aml-samples/sampleexplorer.png)
+![AML sample explorer](/docs/media/aml-samples/sampleexplorer.png)
 
 ### Scale out deep learning model training and/or inferencing to the cloud
-This extension makes it easy to train models on your local computer or you can submit jobs to the cloud by using our integration with Azure Machine Learning. You can submit jobs to different compute targets like Spark clusters, Azure GPU virtual machines and more. Besides, [Azure Batch](https://azure.microsoft.com/en-us/services/batch/) and [Open Platform for AI (PAI)](https://github.com/Microsoft/pai) are also supported.
+This extension makes it easy to train models on your local computer or you can submit jobs to the cloud by using our integration with Azure Machine Learning. You can submit jobs to different compute targets like Spark clusters, Azure GPU virtual machines and more. Besides, [Open Platform for AI (PAI)](https://github.com/Microsoft/pai) is also supported.
 
 [Learn more about training models in the cloud](/docs/quickstart-01-submitting-training-jobs.md)
  
@@ -58,25 +78,41 @@ Once the jobs are submitted, you can list the jobs, check the job details and do
 ![Job View](/docs/media/job/job-view.png)
 
 ### Manage storage on compute targets
-The extension provides a storage explorer which enables you to manage your files on remote machines, Azure Batch clusters, PAI clusters, etc. You can create/delete folders, upload/download files within the VS Code easily.
+The extension provides a storage explorer which enables you to manage your files on remote machines, PAI clusters, etc. You can create/delete folders, upload/download files within the VS Code easily.
 
 [Learn more about storage explorer](/docs/quickstart-03-storage-explorer.md)
 
 ![Storage View](/docs/media/storage/StorageExplorer.png)
 
+### Jupyter notebook server manager
+The extension implements a built-in Jupyter server notebook server manager, which enables you to open a Jupyter notebook inside VS Code for viewing and editing.
+
+[Learn more about Jupyter notebook in VS Code](/docs/quickstart-06-jupyter.md)
+
+![Jupyter View](/docs/media/jupyter/jupyter_webview.png)
+
+### Run TensorBoard locally in VS Code
+
+The extension enables you to run TensorBoard in VS Code and view the model graph in an external browser. You could shutdown the TensorBoard server anytime in the VS Code terminal.
+
+[Learn more about TensorBoard](/docs/quickstart-07-tensorboard.md)
+
+![TensorBoard View](/docs/media/tensorboard/tensorboard_browser.png)
+
 ## Commands
 The extension provides several commands in the Command Palette for working with deep learning and machine learning:
-- **AI: Azure - Login**:  Login to Azure to access resources used by Azure ML / Azure BatchAI.
-- **AI: Azure - Set Subscription**:  Set your Azure Subscription to use for Azure ML / Azure BatchAI
-- **AI: Open Azure ML Sample Explorer**: Quickly get started with machine learning and deep learning experimentation by downloading sample projects you can run and modify to meet your needs 
-- **AI: Azure ML - Open Terminal**: Open Azure CLI terminal to access full Azure feature set
-- **AI: Add Platform Configuration**: Configure compute target (remote VM, BatchAI cluster, PAI cluster) used for training job. **For BatchAI, this command creates a cluster in Azure**.
+- **AI: Azure - Login**:  Login to Azure to access resources used by Azure ML.
+- **AI: Azure - Set Subscription**:  Set your Azure Subscription to use for Azure ML.
+- **AI: Open Azure ML Sample Explorer**: Quickly get started with machine learning and deep learning experimentation by downloading sample projects you can run and modify to meet your needs.
+- **AI: Azure ML - Open Terminal**: Open Azure ML CLI terminal to access full feature set.
+- **AI: Add Platform Configuration**: Configure compute target (remote VM, PAI cluster) used for training job.
 - **AI: Edit Platform Configuration**: Modify compute target settings.
-- **AI: Remove Platform Configuration**: Remove a compute target configuration. **For BatchAI, this command removes the cluster in Azure**.
-- **AI: Submit Job**: Submit a training job to remote Linux VMs, BatchAI clusters, PAI clusters, etc.
+- **AI: Remove Platform Configuration**: Remove a compute target configuration.
+- **AI: Submit Job**: Submit a training job to remote Linux VMs, PAI clusters etc.
 - **AI: Edit Job Properties**: Modify job settings.
-- **AI: List Jobs**: View list of recent jobs you've submitted and their details
+- **AI: List Jobs**: View list of recent jobs you've submitted and their details.
 - **AI: Open Storage Explorer**: View and manage storage on remote compute targets.
+- **AI: Local - Run TensorBoard**: Run TensorBoard locally.
 
 ## Support
 Support for this extension is provided on our [GitHub Issue Tracker](http://github.com/Microsoft/vscode-tools-for-ai/issues). You can submit a bug report, a feature suggestion or participate in discussions.
