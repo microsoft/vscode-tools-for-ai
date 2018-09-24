@@ -1,7 +1,10 @@
 # Visual Studio Code Tools for AI
-Visual Studio Code Tools for AI is an extension to build, test, and deploy Deep Learning / AI solutions. It seamlessly integrates with Azure Machine Learning for robust experimentation capabilities, including but not limited to submitting data preparation and model training jobs transparently to different compute targets. Additionally, it provides support for custom metrics and run history tracking, enabling data science reproducibility and auditing. Enterprise ready collaboration, allow to securely work on project with other people.
+Visual Studio Code Tools for AI is an extension to build, test, and deploy machine learning and deep learning models. It seamlessly integrates with Azure Machine Learning for robust experimentation capabilities, including but not limited to running data preparation and model training experiments both locally and on remote compute targets.
 
-Get started with deep learning using [Microsoft Cognitive Toolkit (CNTK)](http://www.microsoft.com/en-us/cognitive-toolkit), [Google TensorFlow](https://www.tensorflow.org), or other deep-learning frameworks today.  
+Get started with deep learning using [PyTorch](https://pytorch.org/), [TensorFlow](https://www.tensorflow.org), or other machine learning or deep-learning frameworks today.  
+
+**Training a model using Azure Machine Learning**
+![compute](./docs/media/runexperiment.gif)
 
 ## Quick Links
 
@@ -14,12 +17,16 @@ Get started with deep learning using [Microsoft Cognitive Toolkit (CNTK)](http:/
 - [Deep learning sample recipes](https://github.com/Microsoft/samples-for-ai)
 - [View deep learning document in VS Code](/docs/docviewer.md)
 - [Frequently Asked Questions](/docs/faq.md)
-- [Feedback](/docs/feedback.md)
 
+**Using Azure Machine Learning**
+- [Getting started with Azure Machine Learning](/docs/getting-started-aml-vscode.md)
+- [Create and manage Azure compute targets](/docs/manage-compute-aml-vscode.md)
+- [Train and tune models](/docs/train-models-aml-vscode.md)
+- [Deploy and manage models](/docs/deploy-models-aml-vscode.md)
+  
 **Quickstarts**
 
 - [TensorFlow + Python](/docs/tensorflow-local.md)
-- [Create AI project from samples gallery](/docs/quickstart-00-project-from-azuremachinelearning-gallery.md)
 - [Train models in the cloud](/docs/quickstart-01-submitting-training-jobs.md)
 - [Manage job history](/docs/quickstart-02-job-view.md)
 - [Manage storage](/docs/quickstart-03-storage-explorer.md)
