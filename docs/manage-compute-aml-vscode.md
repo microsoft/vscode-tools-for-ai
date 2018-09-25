@@ -4,12 +4,13 @@ Visual Studio Code Tools for AI supports running data preparation and model trai
 This extension supports creating and using 4 different types of remote compute targets with Azure Machine Learning:
 
 **Types of Managed Compute**
-|  |  |
-| --- |---|
-| `Azure Virtual Machines`  | Train models on powerful virtual machines with more memory, faster CPU or the latest GPU for deep learning 
-| `Azure Batch AI cluster` | Automatically scale up or tear down a cluster of powerful GPU machines. When you're not running any experiments, this cluster can even shrink to 0 virtual machines so you're only paying for the compute you use 
-| `Azure Kubernetes Service` | Deploy models in docker containers on a scalable, managed Kubernetes cluster 
-| `Azure Container Instance` | On demand hosting for docker containers. Used for test purposes only, production workloads should be run in Azure Kubernetes Service 
+
+| Resource | Description |
+| --- | --- |
+| `Azure Virtual Machines`  | Train models on powerful virtual machines with more memory, faster CPU or the latest GPU for deep learning |
+| `Azure Batch AI cluster` | Automatically scale up or tear down a cluster of powerful GPU machines. When you're not running any experiments, this cluster can even shrink to 0 virtual machines so you're only paying for the compute you use |
+| `Azure Kubernetes Service` | Deploy models in docker containers on a scalable, managed Kubernetes cluster |
+| `Azure Container Instance` | On demand hosting for docker containers. Used for test purposes only, production workloads should be run in Azure Kubernetes Service |
 
 ## Create managed compute
 
