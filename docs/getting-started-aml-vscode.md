@@ -37,7 +37,7 @@ Please use it to login by using the `Azure: Sign In` command
 
 To learn more about how to create or filter your Azure subscriptions, here is a quick reference of the commands available 
 
-| Command |  |
+| Command | Description |
 | --- |---|
 | `Azure: Sign In`  | Sign in to your Azure subscription.
 | `Azure: Sign Out` | Sign out of your Azure subscription.
