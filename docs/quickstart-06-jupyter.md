@@ -2,7 +2,7 @@
 In this tutorial, we will open a Jupyter notebook in VS Code window.
 
 ## Prerequisites
-Before you begin, ensure you have [set Python path properly in VS Code](https://code.visualstudio.com/docs/python/environments) and have already [installed Jupyter in this Python path with pip] (http://jupyter.org/install).
+Before you begin, ensure you have [set Python path properly in VS Code](https://code.visualstudio.com/docs/python/environments) and have already [installed Jupyter in this Python path with pip](http://jupyter.org/install).
 
 ## Open a project
 
