@@ -20,7 +20,7 @@ or if you have an Nvidia GPU
 pip install tensorflow-gpu
 ```
 
-For more info, please refer to [official TensorFlow doc](https://www.tensorflow.org/install/). The TensorBoard is contained in TensorFlow package, so you don't need to install TensorBoard seperately.
+For more info, please refer to [official TensorFlow doc](https://www.tensorflow.org/install/). The TensorBoard is contained in TensorFlow package, so you don't need to install TensorBoard separately.
 
 ### Write the log data when you training a TensorFlow job.
 
