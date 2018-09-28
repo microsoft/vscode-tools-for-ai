@@ -4,7 +4,7 @@ Before training deep learning models on your local or remote computer you should
 
 > [!NOTE]
 >
-> Software introduction in the following subsectons is excerpted from their homepages.
+> Software introduction in the following subsections is excerpted from their homepages.
 
 ## NVIDIA GPU driver, CUDA and cuDNN
 
@@ -21,8 +21,8 @@ Currently, CUDA Toolkit **9.0** is required by latest version of deep learning f
 To install CUDA
 
 - Visit this [site](https://developer.nvidia.com/cuda-90-download-archive), download CUDA and install it.
-- Make sure to install the CUDA runtime libraries, and then add CUDA binary path to the %PATH% or $PATH environment variable.
-- On Windows, this path is "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin" by default.
+- Make sure to install the CUDA runtime libraries, and then add CUDA binary path to the `%PATH%` or `$PATH` environment variable.
+- On Windows, this path is `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin` by default.
 
 ![install CUDA on Windows](./media/prepare-local-machine/install_cuda90_win.png)
 
@@ -32,8 +32,8 @@ To install CUDA
 
 To install cuDNN
 - Visit [here](https://developer.nvidia.com/rdp/cudnn-archive) to download and install v7.0.5 for CUDA 9.0 package.
-- Ensure to add the directory containing cuDNN binary to the %PATH% or $PATH environment variable.
-- On Windows, you can copy cudnn64_7.dll to "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin".
+- Ensure to add the directory containing cuDNN binary to the `%PATH%` or `$PATH` environment variable.
+- On Windows, you can copy cudnn64_7.dll to `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin`.
 
 
 ## Python
@@ -41,7 +41,7 @@ To install cuDNN
 Python has been the primary programming language for deep learning applications.
 **64-bit** Python distribution is required, and the latest [Python 3.5](https://www.python.org/downloads/release/python-354/) is recommended for the best compatibility.
 
-Please add Python directory to the %PATH% or $PATH environment variable.
+Please add Python directory to the `%PATH%` or `$PATH` environment variable.
 You also need to install **pip**, which is the package management system to install and manage software packages written in Python.
 Deep learning frameworks rely on pip for their own installation.
 
@@ -118,7 +118,7 @@ Please add a ***python.pythonPath*** setting which points to your preferred Pyth
 ## One-click installer
 Setting up deep learning and machine learning software as well as their dependencies is not an easy task.
 We recommend that you use the [one-click installer](https://github.com/Microsoft/samples-for-ai/#using-a-one-click-installer-to-setup-deep-learning-frameworks)
-) to install all of them automatically across Windows, macOS and Linux.
+to install all of them automatically across Windows, macOS and Linux.
 
 
 ## Essential packages
@@ -199,14 +199,14 @@ To install CNTK BrainScript package, run the following command in a terminal:
 - Visit [here](https://github.com/Microsoft/CNTK/releases/tag/v2.5.1) to download the CPU-only or GPU package.
 
 - **Windows**
-    - Decompress the zip file to "%AppData%\Roaming\Microsoft\ToolsForAI\RuntimeSDK". Please create this folder if it does not exist.
-    - Add "%AppData%\Roaming\Microsoft\ToolsForAI\RuntimeSDK\cntk\cntk" to the %PATH% environment variable.
-    - Install Microsoft MPI from "%AppData%\Roaming\Microsoft\ToolsForAI\RuntimeSDK\cntk\prerequisites\MSMpiSetup.exe", which is required by CNTK.
-    - Install Microsoft Visual C++ 2015 Redistributable from "%AppData%\Roaming\Microsoft\ToolsForAI\RuntimeSDK\cntk\prerequisites\VS2015\vc_redist.x64.exe" if it is not installed yet.
+    - Decompress the zip file to `%AppData%\Roaming\Microsoft\ToolsForAI\RuntimeSDK`. Please create this folder if it does not exist.
+    - Add `%AppData%\Roaming\Microsoft\ToolsForAI\RuntimeSDK\cntk\cntk` to the `%PATH%` environment variable.
+    - Install Microsoft MPI from `%AppData%\Roaming\Microsoft\ToolsForAI\RuntimeSDK\cntk\prerequisites\MSMpiSetup.exe`, which is required by CNTK.
+    - Install Microsoft Visual C++ 2015 Redistributable from `%AppData%\Roaming\Microsoft\ToolsForAI\RuntimeSDK\cntk\prerequisites\VS2015\vc_redist.x64.exe` if it is not installed yet.
 
 - **Linux**
-    - Decompress the zip file to your home directory "~/.toolsforai".
-    - Add "~/.toolsforai/cntk/cntk/bin" to the $PATH environment variable.
+    - Decompress the zip file to your home directory `~/.toolsforai`.
+    - Add `~/.toolsforai/cntk/cntk/bin` to the `$PATH environment variable.
     - Install OpenMPI by running the following command in a terminal:
         ```bash
         sudo apt-get install libopenmpi-dev
