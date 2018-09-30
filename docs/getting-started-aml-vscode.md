@@ -24,7 +24,7 @@ Working with Python in Visual Studio Code, using the [Microsoft Python extension
 > **Tip**: Check out the [IntelliCode extension for VS Code (preview)](https://go.microsoft.com/fwlink/?linkid=2006060). IntelliCode provides a set of AI-assisted capabilities for IntelliSense in Python, such as inferring the most relevant auto-completions based on the current code context.
 
 ## Installing Visual Studio Code Tools for AI
-To install the extension, the easist way is using the command Extensions: Install from VSIX... in the Command Palette. Please refer to the VS Code doc for details.
+To install the extension, the easiest way is using the command Extensions: Install from VSIX... in the Command Palette. Please refer to the VS Code doc for details.
 
 Tools for AI depends on two more extensions, Azure Account and Python. Once Tools for AI is installed, these dependent extensions would be installed automatically if users have connected to the Internet.
 
@@ -60,7 +60,7 @@ To learn more about how to create or filter your Azure subscriptions, here is a 
 
 1. Open the Azure activity bar in Visual Studio Code
 1. Open the Azure Machine Learning view
-1.Right-click your Azure subscription and select `Create Workspace`. 
+1. Right-click your Azure subscription and select `Create Workspace`. 
 1. Select an existing resource group or create a new one using the wizard in the command palette.
 1. Specify a name for your new workspace
 1. Hit enter
@@ -71,7 +71,7 @@ To learn more about how to create or filter your Azure subscriptions, here is a 
 
 This will enable you to keep track of your experiments using Azure Machine Learning
 
-1. Right-click the `MNISTWorkspace` and select `Create Experiment`from the context menu.
+1. Right-click the `MNISTWorkspace` and select `Create Experiment` from the context menu.
 1. Name your experiment and hit enter
 
 ### Attach your folder to your experiment
@@ -84,5 +84,5 @@ This will enable associating each of your experiment runs with your experiment s
 You have successfully prepared Visual Studio Code for use with Azure Machine Learning.
 
 - To learn how to create and use Azure Virtual Machines, Azure Batch AI clusters and Azure Kubernetes clusters from Visual Studio Code to train and deploy your models, see [Create and manage compute targets in Visual Studio Code](manage-compute-aml-vscode.md)
-- To learn how to train models and manage your experiments from Visual Studio Code , see [Training models and managing experiments in Visual Studio Code](train-models-aml-vscode.md)
-- To learn how to deploy and manage models from Visual Studio Code , see [Deploying and managing models in Visual Studio Code](deploy-models-aml-vscode.md)
+- To learn how to train models and manage your experiments from Visual Studio Code, see [Training models and managing experiments in Visual Studio Code](train-models-aml-vscode.md)
+- To learn how to deploy and manage models from Visual Studio Code, see [Deploying and managing models in Visual Studio Code](deploy-models-aml-vscode.md)
