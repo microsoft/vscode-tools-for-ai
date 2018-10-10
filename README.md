@@ -53,7 +53,7 @@ Tools for AI Start Page is built to accelerate your start in AI world with
 - Easy instructions to guide you to build your first AI application within 3 steps;
 - AI inferencing/training samples and AI related learning materials for you to quickly learn and build your own AI solutions. 
 
-![sample explorer](/docs/media/homepage/startPage.PNG)
+![sample explorer](/docs/media/homepage/startPage.png)
 
 [Learn more about Start Page](/docs/startPage.md)  
 
