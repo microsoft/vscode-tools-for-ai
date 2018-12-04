@@ -1,7 +1,7 @@
 # Azure Machine Learning for Visual Studio Code
 Azure Machine Learning for Visual Studio Code, previously called Visual Studio Code Tools for AI**, is an extension to easily build, train, and deploy machine learning models to the cloud or the edge with [Azure Machine Learning service](https://azure.microsoft.com/en-us/services/machine-learning-service/).
 
-With Azure Machine Learning servie, you can:
+With Azure Machine Learning service, you can:
 - Build and train machine learning models faster, and easily deploy to the cloud or the edge.
 - Use the latest open source technologies such as [TensorFlow](https://www.tensorflow.org), [PyTorch](https://pytorch.org/), or Jupyter.
 - Experiment locally and then quickly scale up or out with large GPU-enabled clusters in the cloud.
