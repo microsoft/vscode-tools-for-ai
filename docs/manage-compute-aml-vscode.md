@@ -1,27 +1,25 @@
 # Create and manage Azure compute targets in Visual Studio Code
 Visual Studio Code Tools for AI supports running data preparation and model training experiments both locally and on remote compute targets.
 
-This extension supports creating and using 4 different types of remote compute targets with Azure Machine Learning:
+This extension supports creating and using 2 different types of remote compute targets with Azure Machine Learning:
 
 **Types of Managed Compute**
 
 | Resource | Description |
 | --- | --- |
-| `Azure Virtual Machines`  | Train models on powerful virtual machines with more memory, faster CPU or the latest GPU for deep learning |
-| `Azure Batch AI cluster` | Automatically scale up or tear down a cluster of powerful GPU machines. When you're not running any experiments, this cluster can even shrink to 0 virtual machines so you're only paying for the compute you use |
+| `Azure Machine Learning Compute (AmlCompute)` | Automatically scale up or tear down a cluster of powerful GPU machines. When you're not running any experiments, this cluster can even shrink to 0 virtual machines so you're only paying for the compute you use |
 | `Azure Kubernetes Service` | Deploy models in docker containers on a scalable, managed Kubernetes cluster |
-| `Azure Container Instance` | On demand hosting for docker containers. Used for test purposes only, production workloads should be run in Azure Kubernetes Service |
 
 ## Create managed compute
 
 To create each of the different types of managed compute you will follow the same steps, but each type has a few different options
 1. Open the Azure Machine Learning view in the Azure activity bar
 2. Expand your Azure subscription and Azure Machine Learning workspace
-3. Right-click Compute in the tree control and click Create Compute
-4. Select the type of compute (Azure Batch AI, Azure Kubernetes Service, Azure Virtual Machine)
-5. Type the name and select the Virtual Machine size
-6. Specify any advanced properties in the json config file provided at the end of the wizard
-7. Click finish in the notification the lower right
+3. Right-click on the `Compute` node in the tree and select `Create Compute`
+4. Select the type of compute (`Azure Machine Learning Compute (AmlCompute)`, `Azure Kubernetes Service`)
+5. Type in the name and then select the Virtual Machine size
+6. Specify any advanced properties in the json config file provided at the end
+7. Click `Submit` in the notification the lower right
 
 **Example for Azure Batch AI**
 ![compute](./media/createcompute.gif)
@@ -74,9 +72,9 @@ dependencies:
 
 ```
 
-## Congratulations!
-You have successfully prepared Visual Studio Code for use with Azure Machine Learning. 
-
-- To learn more about how to get started with Azure Machine Learning in Visual Studio Code, see [Getting started with Azure Machine Learning](/docs/getting-started-aml-vscode.md)
+## Next steps
 - To learn how to train models and manage your experiments from Visual Studio Code , see [Training models and managing experiments in Visual Studio Code](train-models-aml-vscode.md)
 - To learn how to deploy and manage models from Visual Studio Code , see [Deploying and managing models in Visual Studio Code](deploy-models-aml-vscode.md)
+
+## References
+- To get started with Azure Machine Learning in Visual Studio Code, see [Getting started with Azure Machine Learning](/docs/getting-started-aml-vscode.md)
