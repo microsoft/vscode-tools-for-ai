@@ -1,3 +1,4 @@
+## DEPRECATED DOC - This extension has been re-designed to focus on providing a great experience working with the Azure Machine Learning service. Please check out the latest doc in the [parent folder](..).
 # Getting started with Azure Machine Learning in Visual Studio Code
 Visual Studio Code Tools for AI is an extension to build, test, and deploy machine learning and deep learning models. It seamlessly integrates with Azure Machine Learning for robust experimentation capabilities, including but not limited to running data preparation and model training experiments both locally and on remote compute targets.
 

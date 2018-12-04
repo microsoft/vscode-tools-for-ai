@@ -1,3 +1,4 @@
+## DEPRECATED - This extension has been re-designed to focus on providing a great experience working with the Azure Machine Learning service. Please check out the latest doc in the [parent folder](..).
 # Feedback on VS Code Tools for AI
 If you have any issues, questions or suggestions, you have two approaches to contact us:
 
