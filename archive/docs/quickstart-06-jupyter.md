@@ -1,3 +1,4 @@
+## DEPRECATED DOC- This extension has been re-designed to focus on providing a great experience working with the Azure Machine Learning service. Please check out the latest doc in the [parent folder](..).
 # Open Jupyter notebooks in VS Code
 In this tutorial, we will open a Jupyter notebook in VS Code window.
 

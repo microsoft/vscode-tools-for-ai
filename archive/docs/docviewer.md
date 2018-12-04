@@ -1,3 +1,4 @@
+## DEPRECATED DOC- This extension has been re-designed to focus on providing a great experience working with the Azure Machine Learning service. Please check out the latest doc in the [parent folder](..).
 # View Deep learning document with VS Code
 VS Code Tools for AI is shipped with document for some common deep learning frameworks. You can manage and browse the document in VS Code and search for API reference within editor window through simple command.
 

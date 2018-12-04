@@ -1,3 +1,4 @@
+## DEPRECATED DOC- This extension has been re-designed to focus on providing a great experience working with the Azure Machine Learning service. Please check out the latest doc in the [parent folder](..).
 # Create and manage Azure compute targets in Visual Studio Code
 Visual Studio Code Tools for AI supports running data preparation and model training experiments both locally and on remote compute targets.
 

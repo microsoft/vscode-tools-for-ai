@@ -1,3 +1,5 @@
+## DEPRECATED DOC- This extension has been re-designed to focus on providing a great experience working with the Azure Machine Learning service. Please check out the latest doc in the [parent folder](..).
+
 # Installing Visual Studio Code Tools for AI
 
 This extension works with [Visual Studio Code](https://code.visualstudio.com/). 

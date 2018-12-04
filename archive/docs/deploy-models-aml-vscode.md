@@ -1,3 +1,5 @@
+## DEPRECATED DOC- This extension has been re-designed to focus on providing a great experience working with the Azure Machine Learning service. Please check out the latest doc in the [parent folder](..).
+
 # Deploy and manage models with Azure Machine Learning
 Azure Machine Learning enables deploying and managing your machine learning models in the cloud and on the edge. 
 

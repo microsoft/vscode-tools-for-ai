@@ -1,4 +1,5 @@
-﻿# Frequently Asked Questions
+﻿## DEPRECATED - This extension has been re-designed to focus on providing a great experience working with the Azure Machine Learning service. Please check out the latest doc in the [parent folder](..).
+# Frequently Asked Questions
 
 ## Install Visual Studio Code Tools for AI
 

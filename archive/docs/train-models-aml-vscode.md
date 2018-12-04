@@ -1,3 +1,4 @@
+## DEPRECATED DOC- This extension has been re-designed to focus on providing a great experience working with the Azure Machine Learning service. Please check out the latest doc in the [parent folder](..).
 # Train and tune models in Visual Studio Code
 Azure Machine Learning provides support for running experiments locally and on remote compute targets. For every experiment you can keep track of multiple runs as often you will need to iteratively try different techniques, hyperparameters, and more. You can use Azure Machine Learning to track custom metrics and experiment runs, enabling data science reproducibility and auditability.
 
