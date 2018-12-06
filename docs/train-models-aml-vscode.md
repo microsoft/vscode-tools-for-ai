@@ -3,7 +3,7 @@ Azure Machine Learning provides support for running experiments locally and on r
 
 ## Running experiments with Azure Machine Learning
 
-Using Azure Machine Learning in VS Code enables you to rapidly iterate on your code, step through and debug, and use your source code control solution of choice. For a walkthrough of editing, running, and debugging code locally, see the [Python Hello World Tutorial](https://code.visualstudio.com/docs/languages/python/docs/python/python-tutorial)
+Using Azure Machine Learning in VS Code enables you to rapidly iterate on your code, step through and debug, and use your source code control solution of choice. For a walkthrough of editing, running, and debugging code locally, see the [Python Hello World Tutorial](https://code.visualstudio.com/docs/python/python-tutorial)
 
 To run your experiment with Azure Machine Learning:
 

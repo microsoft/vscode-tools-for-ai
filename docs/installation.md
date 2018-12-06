@@ -52,7 +52,7 @@ You can also enter "vsix" in **Command Palette** (**Ctrl+Shift+P**) to execute t
 This extension automatically installs the [Microsoft Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) as a dependency to provide a better experience working with Python. 
 
 - To learn more about Python in Visual Studio Code [see the docs](https://code.visualstudio.com/docs/languages/python)
-- For a walkthrough of editing, running, and debugging code, see the [Python Hello World Tutorial](https://code.visualstudio.com/docs/languages/python/docs/python/python-tutorial)
+- For a walkthrough of editing, running, and debugging code, see the [Python Hello World Tutorial](https://code.visualstudio.com/docs/python/python-tutorial)
 
 > **Tip**: Check out the [IntelliCode extension for VS Code (preview)](https://go.microsoft.com/fwlink/?linkid=2006060). IntelliCode provides a set of AI-assisted capabilities for IntelliSense in Python, such as inferring the most relevant auto-completions based on the current code context.
 
