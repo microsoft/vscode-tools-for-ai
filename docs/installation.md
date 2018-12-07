@@ -25,9 +25,9 @@ There are 3 ways to install:
 
 2. Click on the **"Azure Machine Learning"** item to navigate to the item detail page.
 
-3. Click **Install**, a dialog will pop up to confirm whether VS Code is installed, install VS Code if you do not have it installed.
-
 ![extensions](./media/installation/marketplace-install.png)
+
+3. Click **Install**, a dialog will pop up to confirm whether VS Code is installed, install VS Code if you do not have it installed.
 
 4. Click the **Intall** button and after a successful install, you'll see an **Reload** button which will prompt you to restart VS Code to enable the extension.
 
