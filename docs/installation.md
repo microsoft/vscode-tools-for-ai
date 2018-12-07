@@ -40,7 +40,7 @@ If you prefer an offline install or install at a later time, follow these steps.
 
 ![extensions](./media/installation/extensions-download.png)
 
-4. In Visual Studio Code, choose **EXTENSIONS:Install from VSIX...** and open the vsix file you just downloaded to install it.
+3. In Visual Studio Code, choose **EXTENSIONS:Install from VSIX...** and open the vsix file you just downloaded to install it.
 You can also enter "vsix" in **Command Palette** (**Ctrl+Shift+P**) to execute this command.
 
 ![extensions](./media/installation/extensions-install.png)
