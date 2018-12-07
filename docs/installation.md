@@ -59,7 +59,7 @@ This extension automatically installs the [Microsoft Python extension](https://m
 ## 3. Install the Azure Machine Learning SDK
 
 1. Open the command palette `Ctrl+Shift+P`
-2. Type Install Azure ML SDK to find the command to install the Azure Machine Learning SDK. This will be installed via a pip install command. It will also create a local private Python environment which has the Visual Studio Code prerequisites for working with Azure Machine Learning.
+2. Run the `Azure ML: Install Azure ML SDK` command to install the Azure Machine Learning SDK. This will create a local private Python environment which has the Visual Studio Code prerequisites for working with Azure Machine Learning.
 3. In the integrated terminal window you will be prompted to specify the Python interpreter to use, or you can simply hit **Enter** to use your default Python interpreter.
 
 ![install](./media/install.gif)
