@@ -16,17 +16,6 @@ Currently this extension supports the following 64-bit operating systems:
 - macOS
 - Linux Ubuntu
 
-## Getting Started
-
-### *Pre-req: Set up the Azure ML environment in VS Code*
-
-Make sure to follow the [Installation](/docs/installation.md) steps before getting started. 
-
-Here's an essential install step that is worth calling out: Once the VS Code AML extension is installed, please follow up these steps to set up the environment in VS Code.
-1. Open the command palette `Ctrl+Shift+P`
-2. Run the `Azure ML: Install Azure ML SDK` command to install the Azure Machine Learning SDK. This will create a local private Python environment which has the Visual Studio Code prerequisites for working with Azure Machine Learning.
-3. In the integrated terminal window you will be prompted to specify the Python interpreter to use, or you can simply hit **Enter** to use your default Python interpreter.
-
 ## References
 - [Release notes](/docs/releasenotes.md)
 - [Installation](/docs/installation.md)
