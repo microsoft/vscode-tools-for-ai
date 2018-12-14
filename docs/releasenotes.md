@@ -1,5 +1,17 @@
 # Release Notes
 
+## 0.4.0 (2018-12-13)
+* This release provides a significant change to how you interact with experiments and folders. Instead of "attaching" a folder to an experiment, you now just need to set an experiment as "active". This can be done by right clicking on an experiment and setting it as "active". The extension will also attempt to associate the folder you have opened in Visual Studio code with the active experiment when performing affected operations. 
+
+* Run configurations are now only exposed as child nodes of the computes, rather than a separate node. 
+
+* This release also also adds the ability to re-run an experiment using the last run configuration used for a previous run to make it easier to re-run an experiment after you have made changes to a script in development. This functionality is currently accessible via the "AML: Repeat Run with Last Configuration" command or by right clicking on a script file after performing at least one experiment run.
+
+* Many fixes including:
+  * Automatic install or update of the extension's runtime dependency on the Azure ML Python SDK.
+  * When creating computes, only show compute sizes available for the active workspace's region.
+  * Ability to view compute properties and edit configurable AmlCompute properties.
+
 ## 0.3.2 (2018-12-04)
 
 The extension has been redesigned to focus on providing a great developer experience working with the Azure Machine Learning service. 
