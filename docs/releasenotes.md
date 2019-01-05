@@ -1,5 +1,8 @@
 # Release Notes
 
+## 0.4.1 (2019-01-04)
+* Fix problems that caused Mac and Linux to fail to install the extension's runtime dependencies (Azure ML SDK).
+
 ## 0.4.0 (2018-12-13)
 * This release provides a significant change to how you interact with experiments and folders. Instead of "attaching" a folder to an experiment, you now just need to set an experiment as "active". This can be done by right clicking on an experiment and setting it as "active". The extension will also attempt to associate the folder you have opened in Visual Studio code with the active experiment when performing affected operations. 
 
