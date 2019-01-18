@@ -1,4 +1,6 @@
 # Release Notes
+## 0.4.2 (2019-01-17)
+* Fix Mac upgrade from version 0.3.1 of the extension.
 
 ## 0.4.1 (2019-01-04)
 * Fix problems that caused Mac and Linux to fail to install the extension's runtime dependencies (Azure ML SDK).
