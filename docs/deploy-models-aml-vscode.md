@@ -1,32 +1,65 @@
-# Deploy and manage models with Azure Machine Learning
+# Deploy and manage models
 Azure Machine Learning enables deploying and managing your machine learning models in the cloud and on the edge. 
 
-## Register your model with Azure Machine Learning
+### Register your model to Azure Machine Learning from VS Code
 
-Once your model is trained, you can register it with Azure Machine Learning to track it and deploy.
-1. Open the Azure Machine Learning view in the Azure activity bar
-2. Expand your Azure subscription and Azure Machine Learning workspace nodes
-3. Right-click on the `Models` node and select `Register Model`
-4. Select either to upload a single model from a **model file** or if you have a model with multiple files (like a Tensorflow model often does) then select **model folder**
-5. Use the file picker to select your file or path
+Now that you have trained your model, you can register it in your workspace.
+Registered models can be tracked and deployed.
 
-![compute](./media/registermodel.gif)
+**To register your model:**
 
-## Deploy your service
+1. Click the Azure icon in the Visual Studio Code activity bar. The Azure Machine Learning sidebar appears.
 
-You can deploy your service to the following deployment targets in the cloud:
-- `Azure Container Instance` - spins up a single container instance, starts up faster. You do not need to create an `Azure Container Instance` to test in advance, this will be created automatically. 
-- `Azure Kubernetes Service`. Learn how to create an `Azure Kubernetes Service` in [Create and manage compute targets in Visual Studio Code](manage-compute-aml-vscode.md). 
+1. In the tree view, expand your Azure subscription and Azure Machine Learning service workspace.
 
-To deploy a service, 
-1. Expand the "Models" node and select the model to be deployed. Right click on the model and select `Deploy Service from Registered Model`.
-2. Select the service type between `Azure Container Instance` and `Azure Kubernetes Service` in the Command Palette.
-3. Input the service name. Press `Enter` to browse to your scoring script, and then press `Enter` again to browse to the conda file - usually a yml file that defines environment dependencies.
-4. If needed, change advanced settings in the json file that shows up, and then click on "Submit" in the notification message box.
-5. Deployment will take a few minutes and you will see a "Deploy Service" message in the status bar while it is in progress.
+1. Under the workspace node, right-click **Models** and choose **Register Model**.
 
-**Example for Azure Container Instance**
-![compute](./media/deploy.gif)
+1. In the Command Palette, enter a model name in the field. 
+
+1. From the list, choose whether you want to upload a **model file** (for single models) a  **model folder** (for models with multiple files, such as Tensorflow). 
+
+1. Select your folder or file.
+
+1. When you are done configuring your model properties, click **Submit** in the bottom-right corner of the screen. 
+
+Here is an example for registering your model to AML:
+[![Registering a Model to AML](./media/vscode-tools-for-ai/RegisteringAModel.gif)](./media/vscode-tools-for-ai/RegisteringAModel.gif#lightbox)
+
+
+### Deploy your service from VS Code
+
+Using VS Code, you can deploy your web service to:
++ Azure Container Instance (ACI): for testing
++ Azure Kubernetes Service (AKS): for production 
+
+You do not need to create an ACI container to test in advance since they are created on the fly. However, AKS clusters do need to be configured in advance. 
+
+Learn more about [deployment with Azure Machine Learning](how-to-deploy-and-where.md) in general.
+
+**To deploy a web service:**
+
+1. Click the Azure icon in the Visual Studio Code activity bar. The Azure Machine Learning sidebar appears.
+
+1. In the tree view, expand your Azure subscription and your Azure Machine Learning service workspace.
+
+1. Under the workspace node, expand the **Models** node.
+
+1. Right-click the model you want to deploy and choose **Deploy Service from Registered Model** command from the context menu.
+
+1. In the Command Palette, choose the compute target to which to deploy from the list. 
+
+1. In the Command Palette, enter a name for this service in the field.  
+
+1. In the Command Palette, press the Enter key on your keyboard to browse and select the script file.
+
+1. In the Command Palette, press the Enter key on your keyboard to browse and select the conda dependency file.
+
+1. When you are done configuring your service properties, click **Submit** in the bottom-right corner of the screen to deploy. In this service properties file, you can specify a local Docker file or a schema.json file that you may want to use.
+
+The web service is now deployed.
+
+Here is an example for deploying a web service:
+[![Deploying a web service](./media/vscode-tools-for-ai/CreatingAnImage.gif)](./media/vscode-tools-for-ai/CreatingAnImage.gif#lightbox)
 
 ## References
 
