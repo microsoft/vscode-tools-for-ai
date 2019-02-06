@@ -1,41 +1,41 @@
-# Create and manage Azure compute targets in Visual Studio Code
-Visual Studio Code Tools for AI supports running data preparation and model training experiments both locally and on remote compute targets.
+## Create and manage Azure compute targets
 
-This extension supports creating and using 2 different types of remote compute targets with Azure Machine Learning:
+With Azure Machine Learning for VS Code, you can prepare your data, train models, and deploy them both locally and on remote compute targets.
 
-**Types of Managed Compute**
+This extension supports several different remote compute targets for Azure Machine Learning. See the [full list of supported compute targets](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-set-up-training-targets) for Azure Machine Learning.
 
-| Resource | Description |
-| --- | --- |
-| `Azure Machine Learning Compute (AmlCompute)` | Automatically scale up or tear down a cluster of powerful GPU machines. When you're not running any experiments, this cluster can even shrink to 0 virtual machines so you're only paying for the compute you use |
-| `Azure Kubernetes Service` | Deploy models in docker containers on a scalable, managed Kubernetes cluster |
+### Create compute targets for Azure Machine Learning in VS Code
 
-## Create managed compute
+**To create a compute target:**
 
-To create each of the different types of managed compute you will follow the same steps, but each type has a few different options
-1. Open the Azure Machine Learning view in the Azure activity bar
-2. Expand your Azure subscription and Azure Machine Learning workspace
-3. Right-click on the `Compute` node in the tree and select `Create Compute`
-4. Select the type of compute (`Azure Machine Learning Compute (AmlCompute)`, `Azure Kubernetes Service`)
-5. Type in the name and then select the Virtual Machine size
-6. Specify any advanced properties in the json config file provided at the end
-7. Click `Submit` in the notification the lower right
+1. Click the Azure icon in the Visual Studio Code activity bar. The Azure Machine Learning sidebar appears.
 
-**Example for Azure Batch AI**
-![compute](./media/createcompute.gif)
+2. In the tree view, expand your Azure subscription and Azure Machine Learning service workspace. In the animated image, the subscription name is 'Free Trial' and the workspace is 'TeamWorkspace'. 
 
-## To use remote compute for experiments
-You must first create a run configuration file. This tells Azure Machine Learning not only where to run your experiment but also how to prepare the environment.
+3. Under the workspace node, right-click the **Compute** node and choose **Create Compute**.
 
-The VS Code extension will automatically create a run configuration for your **local** and **docker** environments on your local computer.
-- By default,  Azure Machine Learning will create a new conda environment for you and manage all of your installation dependencies. You must specify your dependencies in the `aml_config/conda_dependencies.yml` file
-- If you want to install all of your libraries/dependencies yourself, set `userManagedDependencies: True` and then local experiment runs will use your default Python environment as specified by the VS Code Python extension.
+4. Choose the compute target type from the list. 
 
-**Section of default generated run configuration**
+5. In the Command Palette, select a Virtual Machine size.
+
+6. In the Command Palette, enter a name for the compute target in the field. 
+
+7. Specify any advanced properties in the JSON config file that opens in a new tab. You can specify properties such as a maximum node count..
+
+8. When you are done configuring your compute target, click **Submit** in the bottom-right corner of the screen.
+
+Here is an example for creating an Azure Machine Learning Compute (AMLCompute):
+[![Create AML Compute in VS Code](./media/CreateARemoteCompute.gif)](./media/CreateARemoteCompute.gif#lightbox)
+
+#### The 'run configuration' file
+
+The VS Code extension will automatically create a local compute target and run configurations for your **local** and **docker** environments on your local computer. The run configuration files can be found under the associated compute target. 
+
+This is a snippet from the default local run configuration file. By default, `userManagedDependencies: True`  so you must install all of your libraries/dependencies yourself and then local experiment runs will use your default Python environment as specified by the VS Code Python extension.
 
 ```yaml
-# user_managed_dependencies=True indicates that the environment will be user managed. False indicates that AzureML will manage the user environment.
-    userManagedDependencies: False
+# user_managed_dependencies = True indicates that the environment will be user managed. False indicates that AzureML will manage the user environment.
+    userManagedDependencies: True
 # The python interpreter path
     interpreterPath: python
 # Path to the conda dependencies file to use for this run. If a project
@@ -48,9 +48,13 @@ The VS Code extension will automatically create a run configuration for your **l
     enabled: false
 ```
 
-**Section of default generated aml_config/conda_dependencies.yml**
 
-Add additional dependencies in the config file
+#### The conda dependencies file
+
+By default, a new conda environment is created for you and your installation dependencies are managed. However, you must specify your dependencies and their versions in the `aml_config/conda_dependencies.yml` file. 
+
+This is a snippet from the default 'aml_config/conda_dependencies.yml'. For example, you can specify 'tensorflow=1.12.0' as seen below. If you do not specify the version of the dependency, then the latest version will be used.  
+You can add additional dependencies in the config file.
 
 ```yaml
 # The dependencies defined in this file will be automatically provisioned for runs with userManagedDependencies=False.
@@ -62,6 +66,7 @@ dependencies:
   # Currently Azure ML only supports 3.5.2 and later.
 
 - python=3.6.2
+- tensorflow=1.12.0
 
 - pip:
     # Required packages for AzureML execution, history, and data preparation.
