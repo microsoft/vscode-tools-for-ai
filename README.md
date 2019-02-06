@@ -19,10 +19,10 @@ Currently this extension supports the following 64-bit operating systems:
 ## References
 - [Release notes](/docs/releasenotes.md)
 - [Installation](/docs/installation.md)
-- [Getting started with Azure Machine Learning](/docs/getting-started-aml-vscode.md)
-- [Create and manage Azure compute targets](/docs/manage-compute-aml-vscode.md)
-- [Train and tune models](/docs/train-models-aml-vscode.md)
-- [Deploy and manage models](/docs/deploy-models-aml-vscode.md)
+- [Getting started with Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-vscode-tools#prerequisites)
+- [Create and manage Azure compute targets](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-vscode-train-deploy#create-and-manage-compute-targets)
+- [Train and tune models](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-vscode-train-deploy#train-and-tune-models)
+- [Deploy and manage models](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-vscode-train-deploy#deploy-and-manage-models)
 
 ## Support
 Support for this extension is provided on our [GitHub Issue Tracker](http://github.com/Microsoft/vscode-tools-for-ai/issues). You can submit a bug report, a feature suggestion or participate in discussions.
