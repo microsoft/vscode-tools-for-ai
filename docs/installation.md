@@ -21,11 +21,11 @@ There are 3 ways to install:
 ### 2. Install from [Visual Studio Code MarketPlace]
 1. Go to [Visual Studio Code MarketPlace] and search for "Azure Machine Learning" in the search box.
 
-![extensions](./media/installation/extensions-search-on-marketplace.png)
+![extensions](./media/amlmarketplace.PNG)
 
 2. Click on the **"Azure Machine Learning"** item to navigate to the item detail page.
 
-![extensions](./media/installation/marketplace-install.png)
+![extensions](./media/amlmarketplace2.PNG)
 
 3. Click **Install**, a dialog will pop up to confirm whether VS Code is installed, install VS Code if you do not have it installed.
 
@@ -38,7 +38,7 @@ If you prefer an offline install or install at a later time, follow these steps.
 
 2. Click **"Download Extension"** to download the extension package to your local disk.
 
-![extensions](./media/installation/extensions-download.png)
+![extensions](./media/amlmarketplace3.PNG)
 
 3. In Visual Studio Code, choose **EXTENSIONS:Install from VSIX...** and open the vsix file you just downloaded to install it.
 You can also enter "vsix" in **Command Palette** (**Ctrl+Shift+P**) to execute this command.
