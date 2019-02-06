@@ -29,7 +29,7 @@ There are 3 ways to install:
 
 3. Click **Install**, a dialog will pop up to confirm whether VS Code is installed, install VS Code if you do not have it installed.
 
-4. Click the **Intall** button and after a successful install, you'll see an **Reload** button which will prompt you to restart VS Code to enable the extension.
+4. Click the **Install** button and after a successful install, you'll see an **Reload** button which will prompt you to restart VS Code to enable the extension.
 
 ### 3. Download the installer file from [Visual Studio Code MarketPlace]
 If you prefer an offline install or install at a later time, follow these steps.
@@ -56,12 +56,9 @@ This extension automatically installs the [Microsoft Python extension](https://m
 
 > **Tip**: Check out the [IntelliCode extension for VS Code (preview)](https://go.microsoft.com/fwlink/?linkid=2006060). IntelliCode provides a set of AI-assisted capabilities for IntelliSense in Python, such as inferring the most relevant auto-completions based on the current code context.
 
-## 3. Install the Azure Machine Learning SDK
+## 3. Azure Machine Learning SDK Installation
+1. In the bottom-right corner of the window, a notification will appear indicating that the Azure ML SDK is being automatically installed.    A local private Python environment is created that has the Visual Studio Code prerequisites for working with Azure Machine Learning.
 
-1. Open the command palette `Ctrl+Shift+P`
-2. Run the `Azure ML: Install Azure ML SDK` command to install the Azure Machine Learning SDK. This will create a local private Python environment which has the Visual Studio Code prerequisites for working with Azure Machine Learning.
-3. In the integrated terminal window you will be prompted to specify the Python interpreter to use, or you can simply hit **Enter** to use your default Python interpreter.
+   ![install Azure Machine Learning SDK for Python](./media/runtimedependencies.PNG)
 
-![install](./media/install.gif)
 
-  > **NOTE:** If you try to perform any task in Visual Studio Code which requires the Azure Machine Learning SDK and you have not already installed it, or have installed a different version, a warning notification will alert you and you can click a button in the notification to install.
