@@ -1,52 +1,94 @@
-# Getting started with Azure Machine Learning in Visual Studio Code
-Azure Machine Learning for Visual Studio Code, previously called Visual Studio Code Tools for AI**, is an extension to easily build, train, and deploy machine learning models to the cloud or the edge with [Azure Machine Learning service](https://azure.microsoft.com/en-us/services/machine-learning-service/).
+# Get started with Azure Machine Learning for Visual Studio Code
 
+Azure Machine Learning for Visual Studio Code, previously called Visual Studio Code Tools for AI**, is an extension to easily build, train, and deploy machine learning models to the cloud or the edge with Azure Machine Learning service.
 ** Previous documentation and vsix installer are moved to the archive folder.
 
-## 1. Installing the extension by following the [installation steps](./installation.md)
-
-## 2. Preparing Visual Studio Code for Azure Machine Learning
-
-### Log into your Azure Account
-The [Azure Account extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account) was automatically installed in Visual Studio Code during the install step. 
-
-Please use it to login by using the `Azure: Sign In` command 
-
-To learn more about how to create or filter your Azure subscriptions, here is a quick reference of the commands available 
-
-| Command | Description |
-| --- |---|
-| `Azure: Sign In`  | Sign in to your Azure subscription.
-| `Azure: Sign Out` | Sign out of your Azure subscription.
-| `Azure: Select Subscriptions` | Pick the set of subscriptions you want to work with. 
-| `Azure: Create an Account`  | If you don't have an Azure Account, you can [sign up](https://azure.microsoft.com/en-us/free/?utm_source=campaign&utm_campaign=vscode-azure-account&mktingSource=vscode-azure-account) for one today and receive $200 in free credits.
+In this article, you'll learn how to install the **Azure Machine Learning for Visual Studio Code** extension and create your first experiment with Azure Machine Learning service in Visual Studio Code (VS Code).
 
 
-## 3. Getting started with Azure Machine Learning
+## Prerequisite
 
-### Create an Azure Machine Learning workspace
 
-1. Open the `Azure activity` bar in Visual Studio Code.
-1. Open the Azure Machine Learning view
-1. Right-click your Azure subscription and select `Create Workspace`. 
-1. Select an existing resource group or create a new one using the wizard in the command palette.
-1. Specify a name for your new workspace
-1. Hit enter
++ If you don’t have an Azure subscription, create a free account before you begin. Try the [free or paid version of Azure Machine Learning service](http://aka.ms/AMLFree) today.
 
-![install](./media/createworkspace.gif)
++ Visual Studio Code must be installed. VS Code is a lightweight but powerful source code editor that runs on your desktop. It comes with built-in support for Python and more.  [Learn how to install VS Code](https://code.visualstudio.com/docs/setup/setup-overview).
 
-### Create an Azure Machine Learning experiment
++ [Install Python 3.5 or greater](https://www.anaconda.com/download/).
 
-This will enable you to keep track of your experiments using Azure Machine Learning
 
-1. Right-click an Azure Machine Learning workspace and select `Create Experiment` from the context menu.
-1. Name your experiment and hit enter.
+## Install the Azure Machine Learning for VS Code extension
 
-### Attach your folder to your experiment
+When you install the **Azure Machine Learning** extension, two more extensions are automatically installed (if you have internet access). They are the [Azure Account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account) extension and the [Microsoft Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extension
 
-Right click on an Azure Machine Learning experiment and select `Attach Folder to Experiement` - This will enable associating each of your experiment runs with your experiment so all of your key metrics will be stored in the experiment history and the models you train will get automatically uploaded to Azure Machine Learning and stored with your experimment metrics and logs.
+To work with Azure Machine Learning, we need to turn VS Code into a Python IDE. Working with [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python), requires the Microsoft Python extension, which gets installed with the Azure Machine Learning extension automatically. The extension makes VS Code an excellent IDE, and works on any operating system with a variety of Python interpreters. It leverages all of VS Code's power to provide auto complete and IntelliSense, linting, debugging, and unit testing, along with the ability to easily switch between Python environments, including virtual and conda environments. Check out this walk-through of editing, running, and debugging Python code, see the [Python Hello World Tutorial](https://code.visualstudio.com/docs/python/python-tutorial)
 
-![install](./media/attachfolder.gif)
+**To install the Azure Machine Learning extension:**
+
+1. Launch VS Code.
+
+1. In a browser, visit: [Azure Machine Learning for Visual Studio Code (Preview)](https://aka.ms/vscodetoolsforai) extension
+
+1. In that web page, click **Install**. 
+
+1. In the extension tab, click **Install**.
+
+1. A welcome tab opens in VS Code for the extension and the Azure symbol is added to activity bar.
+
+   ![Azure icon in the Visual Studio Code activity bar](./media/azure-activity-bar.png)
+
+1. In the dialog box, click **Sign In** and follow the onscreen prompt to authenticate with Azure. 
+   
+   The Azure Account extension, which was installed along with the Azure Machine Learning for VS Code extension, helps you authenticate with your Azure account. See the list of commands in the [Azure Account extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account) page.
+
+> [!Tip] 
+> Check out the [IntelliCode extension for VS Code (preview)](https://go.microsoft.com/fwlink/?linkid=2006060). IntelliCode provides a set of AI-assisted capabilities for IntelliSense in Python, such as inferring the most relevant auto-completions based on the current code context.
+
+## Azure ML SDK Installation
+
+1. Make sure that Python 3.5 or greater is installed and recognized by VS Code. If you install it now, then  restart VS Code and select a Python interpreter using instructions at https://code.visualstudio.com/docs/python/python-tutorial.
+
+1. In the integrated terminal window, specify the Python interpreter to use or you can hit **Enter** to use your default Python           interpreter.
+
+   ![Choose the interpreter](./media/python.png)
+
+1. In the bottom-right corner of the window, a notification will appear indicating that the Azure ML SDK is being automatically installed.    A local private Python environment is created that has the Visual Studio Code prerequisites for working with Azure Machine Learning.
+
+   ![install Azure Machine Learning SDK for Python](./media/runtimedependencies.png)
+
+## Get started with Azure Machine Learning
+
+Before you start training and deploying machine learning models using VS Code, you need to create an [Azure Machine Learning service workspace](concept-azure-machine-learning-architecture.md#workspace) in the cloud to contain your models and resources. Learn how to create one and create your first experiment in that workspace.
+
+1. Click the Azure icon in the Visual Studio Code activity bar. The Azure Machine Learning sidebar appears.
+
+   [![install](./media/CreateaWorkspace.gif)](./media/CreateaWorkspace.gif#lightbox)
+
+
+1. Right-click your Azure subscription and select **Create Workspace**. A list appears. In the animated image, the subscription name is 'Free Trial' and the workspace is 'TeamWorkspace'. 
+
+1. Select an existing resource group from the list or create a new one using the wizard in the Command Palette.
+
+1. In the field, type a unique and clear name for your new workspace. In the screenshots, the workspace is named 'TeamWorkspace'.
+
+1. Hit enter and the new workspace is created. It appears in the tree below the subscription name.
+
+1. Right-click on the Experiment node and choose **Create Experiment** from the context menu.  Experiments keep track of your runs using Azure Machine Learning.
+
+1. In the field, enter a name your experiment. In the screenshots, the experiment is named 'MNIST'.
+ 
+1. Hit enter and the new experiment is created. It appears in the tree below the workspace name.
+
+1. You can right-click on an Experiment in a Workspace and select 'Set as Active Experiment'. The **'Active'** experiment is the experiment you are currently using and your open folder in VS Code will be linked to this experiment in the cloud. This folder should contain your local Python scripts.
+
+   Now each of your experiment runs with your experiment, so all of your key metrics will be stored in the experiment history and the models you train will get automatically uploaded to Azure Machine Learning and stored with your experiment metrics and logs.
+
+   [![Attach a folder in VS Code](./media/CreateAnExperiment.gif)](./media/CreateAnExperiment.gif#lightbox)
+
+### Use keyboard shortcuts
+
+Like most of VS Code, the Azure Machine Learning features in VS Code are accessible from the keyboard. The most important key combination to know is Ctrl+Shift+P, which brings up the Command Palette. From here, you have access to all of the functionality of VS Code, including keyboard shortcuts for the most common operations.
+
+[![Keyboard shortcuts for Azure Machine Learning for VS Code](./media/commands.gif)](./media/commands.gif#lightbox)
 
 ## Next steps
 - To learn how to create and manage compute resources in Azure Machine Learning from within VS Code, see [Create and manage compute targets in Visual Studio Code](manage-compute-aml-vscode.md)
