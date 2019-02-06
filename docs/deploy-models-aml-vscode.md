@@ -23,7 +23,7 @@ Registered models can be tracked and deployed.
 1. When you are done configuring your model properties, click **Submit** in the bottom-right corner of the screen. 
 
 Here is an example for registering your model to AML:
-[![Registering a Model to AML](./media/vscode-tools-for-ai/RegisteringAModel.gif)](./media/vscode-tools-for-ai/RegisteringAModel.gif#lightbox)
+[![Registering a Model to AML](./media/RegisteringAModel.gif)](./media/RegisteringAModel.gif#lightbox)
 
 
 ### Deploy your service from VS Code
@@ -59,7 +59,7 @@ Learn more about [deployment with Azure Machine Learning](how-to-deploy-and-wher
 The web service is now deployed.
 
 Here is an example for deploying a web service:
-[![Deploying a web service](./media/vscode-tools-for-ai/CreatingAnImage.gif)](./media/vscode-tools-for-ai/CreatingAnImage.gif#lightbox)
+[![Deploying a web service](./media/CreatingAnImage.gif)](./media/CreatingAnImage.gif#lightbox)
 
 ## References
 
