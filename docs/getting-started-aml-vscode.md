@@ -53,7 +53,7 @@ To work with Azure Machine Learning, we need to turn VS Code into a Python IDE. 
 
 1. In the bottom-right corner of the window, a notification will appear indicating that the Azure ML SDK is being automatically installed.    A local private Python environment is created that has the Visual Studio Code prerequisites for working with Azure Machine Learning.
 
-   ![install Azure Machine Learning SDK for Python](./media/runtimedependencies.png)
+   ![install Azure Machine Learning SDK for Python](./media/runtimedependencies.PNG)
 
 ## Get started with Azure Machine Learning
 
