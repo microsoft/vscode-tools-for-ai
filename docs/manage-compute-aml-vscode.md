@@ -31,7 +31,7 @@ Here is an example for creating an Azure Machine Learning Compute (AMLCompute):
 
 #### The 'run configuration' file
 
-Run configuration files, or "runconfig" files specify the overall environment on which your python code will. run. Run configuration files can be found under each associated Compute node in your Workspace.
+Run configuration files, or "runconfig" files specify the overall environment on which your python code will run. Run configuration files can be found under each associated Compute node in your Workspace.
 
 New run configurations can be created for any compute you may have in your Workspace. To add a new run configuration, right click on the compute node and choose **Create Run Configuration**.
 
