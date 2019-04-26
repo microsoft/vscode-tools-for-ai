@@ -1,12 +1,9 @@
 # Install Azure Machine Learning for Visual Studio Code
 
-## 0. Pre-requisites: install Visual Studio Code
-Please first install Visual Studio Code by following the [Visual Studio Code installation instructions](https://code.visualstudio.com/docs/setup/setup-overview).
-
 ## 1. Install the Azure Machine Learning for Visual Studio Code extension
 There are 3 ways to install:
 
-### Option 1 - Install from within Visual Studio Code
+### Option 1 - Install from within Visual Studio Code (Recommended)
 
 1. Bring up the **Extensions** view in VS Code by clicking on the Extensions icon in the **Activity Bar** on the side of VS Code or the **View > Extensions** command (**Ctrl+Shift+X**).
 
