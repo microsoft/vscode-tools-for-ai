@@ -1,55 +1,50 @@
 ## Train and tune models
 
-Use Azure Machine Learning for VS Code (Preview) to rapidly iterate on your code, step through and debug, and use your source code control solution of choice. 
+Use Azure Machine Learning for VS Code (Preview) to rapidly iterate on your code, step through and debug, and use your source code control solution of choice. All runs that are executed are collected and can be viewed via the active Experiment in your Workspace. There are numerous ways to submit training runs on available computes. Here is a couple ways to execute a training run.
 
-### The 'run configuration' file
+**Start by choosing a script to run**
 
-The VS Code extension will automatically create a local compute target and run configurations for your **local** and **docker** environments on your local computer. The run configuration files can be found under the associated compute target. 
+1. Right-click on your python script either in the VS Code Explorer or the editor and select **AML: Run as Experiment in Azure**.
 
-This is a snippet from the default local run configuration file. By default, `userManagedDependencies: True`  so you must install all of your libraries/dependencies yourself and then local experiment runs will use your default Python environment as specified by the VS Code Python extension.
+1. Answer all prompts that may appear in the Command Palette area of VS Code. Depending on whether you have done prior runs, prompts may vary. Typical prompts include the Azure subscription, Azure ML workspace and compute to target. Along the way you will be able to choose existing resources or create new ones from scratch.
 
-```yaml
-# user_managed_dependencies = True indicates that the environment will be user managed. False indicates that AzureML will manage the user environment.
-    userManagedDependencies: True
-# The python interpreter path
-    interpreterPath: python
-# Path to the conda dependencies file to use for this run. If a project
-# contains multiple programs with different sets of dependencies, it may be
-# convenient to manage those environments with separate files.
-    condaDependenciesFile: aml_config/conda_dependencies.yml
-# Docker details
-    docker:
-# Set True to perform this run inside a Docker container.
-    enabled: false
-```
+1. The last prompt asks you to specify the run configuration. Run configurations are used to specify the overall environment in which your python script will run. This information is stored as files in your script's **.azureml** folder and can be accessed directly there or under each Compute in the Azure ML sidebar.
 
-**To run your experiment locally with Azure Machine Learning:**
+1. After specifying the run configuration, your run will be submitted to Azure ML. Click **View Experiment Run** to open the Azure Machine Learning portal to monitor the run.
+
+**Start by choosing a compute target**
 
 1. Click the Azure icon in the Visual Studio Code activity bar. The Azure Machine Learning sidebar appears.
 
-1. In the tree view, expand your Azure subscription and Azure Machine Learning service workspace. 
+1. In the tree view, expand your Azure subscription and Azure Machine Learning service Workspace.
 
-1. Under the workspace node, expand the **Compute** node and right-click on the **Run Config** of compute you want to use. 
+1. Under the **Workspace** node, expand the **Compute** node and right-click on the any compute.
 
 1. Select **Run Experiment**.
 
-1. Select the script to run from the File Explorer. 
+1. You will be prompted to select the script to run and, depending on the compute target you chose, the run configuration to use.
 
-1. Click **View Experiment Run** to see the integrated Azure Machine Learning portal to monitor your runs and see your trained models.
+1. After specifying the run configuration, your run will be submitted to Azure ML. Click **View Experiment Run** to open the Azure Machine Learning portal to monitor the run.
 
 Here is an example for running an experiment locally:
 [![Running an experiment locally](./media/RunExperimentLocally.gif)](./media/RunExperimentLocally.gif#lightbox)
 
-### Use remote computes for experiments in VS Code
-
-To use a remote compute target when training, you need to create a run configuration file. This file tells Azure Machine Learning not only where to run your experiment but also how to prepare the environment.
-
 #### The conda dependencies file
 
-By default, a new conda environment is created for you and your installation dependencies are managed. However, you must specify your dependencies and their versions in the `aml_config/conda_dependencies.yml` file. 
+By default, all conda and pip dependencies for your script are specified in the run configuration. However, you can also specifiy the environment via a `conda_dependencies.yml` file. A default version of this file is created in the .azureml subfolder of your project when an experiment is made active. To make use of it, modify the desired `.runconfig` file as follows
 
-This is a snippet from the default 'aml_config/conda_dependencies.yml'. For example, you can specify 'tensorflow=1.12.0' as seen below. If you do not specify the version of the dependency, then the latest version will be used.  
-You can add additional dependencies in the config file.
+```json
+    "environment": {
+        "python": {
+            "condaDependenciesFile": ".azureml/conda_dependencies.yml",
+            "userManagedDependencies": true,
+            ...
+        },
+    },
+```
+
+
+This is a snippet from the default 'aml_config/conda_dependencies.yml'. For example, you can specify 'tensorflow=1.12.0' as seen below. If you do not specify the version of the dependency, then the latest version will be used.
 
 ```yaml
 # The dependencies defined in this file will be automatically provisioned for runs with userManagedDependencies=False.
@@ -71,25 +66,6 @@ dependencies:
   - azureml-defaults
 
 ```
-
-**To run your experiment with Azure Machine Learning on a remote compute target:**
-
-1. Click the Azure icon in the Visual Studio Code activity bar. The Azure Machine Learning sidebar appears.
-
-1. In the tree view, expand your Azure subscription and Azure Machine Learning service workspace. 
-
-1. Right-click on your python script in the editor window and select **AML: Run as Experiment in Azure**. 
-
-1. In the Command Palette, select the compute target. 
-
-1. In the Command Palette, enter the run configuration name in the field. 
-
-1. Edit the conda_dependencies.yml file to specify the experiment's runtime dependencies, then click **Submit** in the bottom-right corner of the screen. 
-
-1. Click **View Experiment Run** to see the integrated Azure Machine Learning portal to monitor your runs and see your trained models.
-
-Here is an example for running an experiment on a remote compute target:
-[![Running an experiment on a remote target](./media/runningOnARemoteTarget.gif)](./media/runningOnARemoteTarget.gif#lightbox)
 
 
 ## Next steps

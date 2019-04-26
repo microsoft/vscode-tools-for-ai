@@ -6,7 +6,7 @@ Please first install Visual Studio Code by following the [Visual Studio Code ins
 ## 1. Install the Azure Machine Learning for Visual Studio Code extension
 There are 3 ways to install:
 
-### 1. From within Visual Studio Code
+### Option 1 - Install from within Visual Studio Code
 
 1. Bring up the **Extensions** view in VS Code by clicking on the Extensions icon in the **Activity Bar** on the side of VS Code or the **View > Extensions** command (**Ctrl+Shift+X**).
 
@@ -18,7 +18,7 @@ There are 3 ways to install:
 
 3. Click the **Intall** button and after a successful install, you'll see an **Reload** button which will prompt you to restart VS Code to enable the extension.
 
-### 2. Install from [Visual Studio Code MarketPlace]
+### Option 2 - Install from [Visual Studio Code MarketPlace]
 1. Go to [Visual Studio Code MarketPlace] and search for "Azure Machine Learning" in the search box.
 
 ![extensions](./media/amlmarketplace.PNG)
@@ -31,7 +31,7 @@ There are 3 ways to install:
 
 4. Click the **Install** button and after a successful install, you'll see an **Reload** button which will prompt you to restart VS Code to enable the extension.
 
-### 3. Download the installer file from [Visual Studio Code MarketPlace]
+### Option 3 - Download the installer file from [Visual Studio Code MarketPlace]
 If you prefer an offline install or install at a later time, follow these steps.
 
 1. Go to [Visual Studio Code MarketPlace] and search for "Azure Machine Learning" in the search box.
@@ -47,18 +47,7 @@ You can also enter "vsix" in **Command Palette** (**Ctrl+Shift+P**) to execute t
 
 [Visual Studio Code MarketPlace]:https://marketplace.visualstudio.com/vscode
 
-## 2. Install the Python extension for Visual Studio Code
 
-This extension automatically installs the [Microsoft Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) as a dependency to provide a better experience working with Python. 
 
-- To learn more about Python in Visual Studio Code [see the docs](https://code.visualstudio.com/docs/languages/python)
-- For a walkthrough of editing, running, and debugging code, see the [Python Hello World Tutorial](https://code.visualstudio.com/docs/python/python-tutorial)
-
-> **Tip**: Check out the [IntelliCode extension for VS Code (preview)](https://go.microsoft.com/fwlink/?linkid=2006060). IntelliCode provides a set of AI-assisted capabilities for IntelliSense in Python, such as inferring the most relevant auto-completions based on the current code context.
-
-## 3. Azure Machine Learning SDK Installation
-1. In the bottom-right corner of the window, a notification will appear indicating that the Azure ML SDK is being automatically installed.    A local private Python environment is created that has the Visual Studio Code prerequisites for working with Azure Machine Learning.
-
-   ![install Azure Machine Learning SDK for Python](./media/runtimedependencies.PNG)
 
 

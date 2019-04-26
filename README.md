@@ -1,5 +1,5 @@
 # Azure Machine Learning for Visual Studio Code
-Azure Machine Learning for Visual Studio Code, previously called Visual Studio Code Tools for AI**, is an extension to easily build, train, and deploy machine learning models to the cloud or the edge with [Azure Machine Learning service](https://azure.microsoft.com/en-us/services/machine-learning-service/).
+Azure Machine Learning for Visual Studio Code, previously called Visual Studio Code Tools for AI**, is an extension that allows you to easily build, train, and deploy machine learning models to the cloud or the edge with [Azure Machine Learning service](https://azure.microsoft.com/en-us/services/machine-learning-service/).
 
 With Azure Machine Learning service, you can:
 - Build and train machine learning models faster, and easily deploy to the cloud or the edge.
@@ -14,7 +14,7 @@ With Azure Machine Learning service, you can:
 Currently this extension supports the following 64-bit operating systems:
 - Windows
 - macOS
-- Linux Ubuntu
+- Linux Ubuntu (other distros may also work)
 
 ## References
 - [Release notes](/docs/releasenotes.md)
@@ -34,7 +34,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct]. For more i
 The [Microsoft Enterprise and Developer Privacy Statement] describes the privacy statement of this software.
 
 ## License
-This extension is subject to the terms of the [End User License Agreement]. 
+This extension is subject to the terms of the [End User License Agreement].
 
 [Microsoft Enterprise and Developer Privacy Statement]:https://go.microsoft.com/fwlink/?LinkId=786907&lang=en7
 [Microsoft Open Source Code of Conduct]:https://opensource.microsoft.com/codeofconduct/
