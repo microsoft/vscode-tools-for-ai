@@ -8,7 +8,7 @@ With Azure Machine Learning service, you can:
 - Speed up data science with automated machine learning and hyper-parameter tuning.
 - Track your experiments, manage models, and easily deploy with integrated CI/CD tooling.
 
-** Previous documentation and vsix installer have been moved to the [archive](/archive) folder.
+** Previous documentation and vsix installer have been moved to the archive.zip file.
 
 ## Supported Operating Systems
 Currently this extension supports the following 64-bit operating systems:
@@ -18,11 +18,7 @@ Currently this extension supports the following 64-bit operating systems:
 
 ## References
 - [Release notes](/docs/releasenotes.md)
-- [Installation](/docs/installation.md)
-- [Getting started with Azure Machine Learning](/docs/getting-started-aml-vscode.md)
-- [Create and manage Azure compute targets](/docs/manage-compute-aml-vscode.md)
-- [Train and tune models](/docs/train-models-aml-vscode.md)
-- [Deploy and manage models](/docs/deploy-models-aml-vscode.md)
+- [Documentation](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-vscode-tools)
 
 ## Support
 Support for this extension is provided on our [GitHub Issue Tracker](http://github.com/Microsoft/vscode-tools-for-ai/issues). You can submit a bug report, a feature suggestion or participate in discussions.
