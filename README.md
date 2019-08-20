@@ -1,5 +1,6 @@
 # Azure Machine Learning for Visual Studio Code
-Azure Machine Learning for Visual Studio Code, previously called Visual Studio Code Tools for AI**, is an extension that allows you to easily build, train, and deploy machine learning models to the cloud or the edge with [Azure Machine Learning service](https://azure.microsoft.com/en-us/services/machine-learning-service/).
+
+With the **Azure Machine Learning for Visual Studio Code extension** you can easily build, train, and deploy machine learning models to the cloud or the edge with [Azure Machine Learning service](https://azure.microsoft.com/services/machine-learning-service/) from the Visual Studio Code interface. Earlier versions of this extension were released under the name _Visual Studio Code Tools for AI_.
 
 With Azure Machine Learning service, you can:
 - Build and train machine learning models faster, and easily deploy to the cloud or the edge.
@@ -8,7 +9,7 @@ With Azure Machine Learning service, you can:
 - Speed up data science with automated machine learning and hyper-parameter tuning.
 - Track your experiments, manage models, and easily deploy with integrated CI/CD tooling.
 
-** Previous documentation and vsix installer have been moved to the archive.zip file.
+With this extension installed, you can accomplish much  of this workflow directly from Visual Studio Code.
 
 ## Supported Operating Systems
 Currently this extension supports the following 64-bit operating systems:
@@ -16,9 +17,11 @@ Currently this extension supports the following 64-bit operating systems:
 - macOS
 - Linux Ubuntu (other distros may also work)
 
-## References
+## Learn more
 - [Release notes](/docs/releasenotes.md)
-- [Documentation](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-vscode-tools)
+- [Documentation](https://docs.microsoft.com/azure/machine-learning/service/how-to-vscode-tools)
+
+** Previous documentation and vsix installer have been moved to the archive.zip file.
 
 ## Support
 Support for this extension is provided on our [GitHub Issue Tracker](http://github.com/Microsoft/vscode-tools-for-ai/issues). You can submit a bug report, a feature suggestion or participate in discussions.
