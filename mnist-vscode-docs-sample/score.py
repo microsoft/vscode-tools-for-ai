@@ -10,7 +10,7 @@ def init():
     global X, output, sess
     tf.reset_default_graph()
     # retreive the local path to the model using the model name
-    model_root = Model.get_model_path('mnist_tf_model')
+    model_root = Model.get_model_path('MNIST-TensorFlow-model')
     saver = tf.train.import_meta_graph(os.path.join(model_root, 'mnist-tf.model.meta'))
     X = tf.get_default_graph().get_tensor_by_name("network/X:0")
     output = tf.get_default_graph().get_tensor_by_name("network/output/MatMul:0")
