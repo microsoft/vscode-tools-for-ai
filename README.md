@@ -18,10 +18,7 @@ Currently this extension supports the following 64-bit operating systems:
 - Linux Ubuntu (other distros may also work)
 
 ## Learn more
-- [Release notes](/docs/releasenotes.md)
 - [Documentation](https://docs.microsoft.com/azure/machine-learning/service/how-to-vscode-tools)
-
-** Previous documentation and vsix installer have been moved to the archive.zip file.
 
 ## Support
 Support for this extension is provided on our [GitHub Issue Tracker](http://github.com/Microsoft/vscode-tools-for-ai/issues). You can submit a bug report, a feature suggestion or participate in discussions.
