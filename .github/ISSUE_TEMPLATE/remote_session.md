@@ -2,7 +2,7 @@
 name: Connect to Compute Instance issue
 about: Issues related to the "Connect to VS Code Server on Compute Instance" feature
 title: ''
-labels: ''
+labels: 'amlext-remote'
 assignees: ''
 
 ---
