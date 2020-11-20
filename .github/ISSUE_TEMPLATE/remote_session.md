@@ -7,6 +7,19 @@ assignees: ''
 
 ---
 
-<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->
+## Expected Behavior
 
-<!-- Describe the issue you have experienced. -->
+
+## Actual Behavior
+
+
+## Steps to Reproduce the Problem
+
+  1.
+  1.
+  1.
+
+## Specifications
+
+  - VS Code Version:
+  - Platform:
