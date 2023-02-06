@@ -1,0 +1,30 @@
+name: Add Filed by Team Label
+
+on:
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  add_label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-add-labels@v1
+        if: 
+          ${{ 
+            contains(
+              fromJson('[
+                "shsuman",
+                "sevillal",
+                "tbombach",
+                "jimgries"
+              ]'), 
+              github.actor
+            ) 
+          }}
+        with:
+          labels: filed-by-team
