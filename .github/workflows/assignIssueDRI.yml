@@ -1,0 +1,40 @@
+name: Assign issue to DRI responsible
+
+on: [push]
+
+permissions:
+  issues: write
+
+jobs:
+    assignIssue:
+        name: Assign issue to DRI responsible
+        runs-on: ubuntu-latest
+        if: github.repository == 'microsoft/vscode-tools-for-ai'
+        steps:
+            - uses: actions/checkout@v3
+            - name: Created internally
+              id: internal
+              env:
+                  ISSUE_OWNER: ${{ github.event.issue.user.login }}
+              run: |
+                  echo ::set-output name=result::$(node -p -e "['greazer', 'sevillal', 'shsuman', 'tbombach'].filter(item => process.env.ISSUE_OWNER.toLowerCase() === item.toLowerCase()).length > 0 ? 1 : 0")
+              shell: bash
+            - name: Should we proceed
+              id: proceed
+              env:
+                  ISSUE_ASSIGNEES: ${{toJson(github.event.issue.assignees)}}
+                  ISSUE_IS_INTERNAL: ${{steps.internal.outputs.result}}
+              run: |
+                  echo ::set-output name=result::$(node -p -e "process.env.ISSUE_IS_INTERNAL === '0' && JSON.parse(process.env.ISSUE_ASSIGNEES).length === 0 ? 1 : 0")
+              shell: bash
+            - name: Calculate week number
+              if: steps.proceed.outputs.result == 1
+              id: week
+              run: |
+                echo ::set-output name=odd::$(node .github/workflows/week.js)
+              shell: bash            
+            - name: Print week number
+              if: steps.proceed.outputs.result == 1
+              run: |
+                echo ${{steps.week.outputs.odd}}
+              shell: bash
