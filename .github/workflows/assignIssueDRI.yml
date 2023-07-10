@@ -1,0 +1,70 @@
+name: Assign issue to DRI responsible
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+    assignIssue:
+        name: Assign issue to DRI responsible
+        runs-on: ubuntu-latest
+        if: github.repository == 'microsoft/vscode-tools-for-ai'
+        steps:
+            - uses: actions/checkout@v3
+            - name: Created internally
+              id: internal
+              env:
+                  ISSUE_OWNER: ${{ github.event.issue.user.login }}
+              run: |
+                  echo ::set-output name=result::$(node -p -e "['greazer', 'sevillal', 'shsuman', 'tbombach', 'yaoleo34'].filter(item => process.env.ISSUE_OWNER.toLowerCase() === item.toLowerCase()).length > 0 ? 1 : 0")
+              shell: bash
+            - name: Should we proceed
+              id: proceed
+              env:
+                  ISSUE_ASSIGNEES: ${{toJson(github.event.issue.assignees)}}
+                  ISSUE_IS_INTERNAL: ${{steps.internal.outputs.result}}
+              run: |
+                  echo ::set-output name=result::$(node -p -e "process.env.ISSUE_IS_INTERNAL === '0' && JSON.parse(process.env.ISSUE_ASSIGNEES).length === 0 ? 1 : 0")
+              shell: bash
+            - name: Calculate week number
+              if: steps.proceed.outputs.result == 1
+              id: week
+              run: |
+                echo ::set-output name=week::$(node .github/workflows/week.js)
+              shell: bash            
+            - name: Print week number
+              if: steps.proceed.outputs.result == 1
+              run: |
+                echo ${{steps.week.outputs.week}}
+              shell: bash
+            - name: Get DRI responsible
+              if: steps.proceed.outputs.result == 1
+              id: dri
+              env:
+                DRI_RESPONSIBLE_DEFAULT: ${{vars.DRI_RESPONSIBLE_DEFAULT}}
+                DRI_OWNERS: ${{vars.DRI_OWNERS}}
+              run: |
+                echo ::set-output name=result::$(node .github/workflows/dri.js)
+              shell: bash
+            - name: Print DRI responsible
+              if: steps.proceed.outputs.result == 1
+              run: |
+                echo ${{steps.dri.outputs.result}}
+              shell: bash
+            - name: Assign issue to DRI responsible
+              if: steps.proceed.outputs.result == 1
+              env:
+                DRI_RESPONSIBLE: ${{steps.dri.outputs.result}}
+              uses: actions/github-script@v6.4.1
+              with:
+                github-token: ${{secrets.GITHUB_TOKEN}}
+                script: |
+                  github.rest.issues.addAssignees({
+                    issue_number: context.issue.number,
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    assignees: ['${{ env.DRI_RESPONSIBLE }}']
+                  })
