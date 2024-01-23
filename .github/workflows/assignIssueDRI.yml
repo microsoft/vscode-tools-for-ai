@@ -19,7 +19,7 @@ jobs:
               env:
                   ISSUE_OWNER: ${{ github.event.issue.user.login }}
               run: |
-                  echo ::set-output name=result::$(node -p -e "['greazer', 'sevillal', 'shsuman', 'tbombach', 'yaoleo34'].filter(item => process.env.ISSUE_OWNER.toLowerCase() === item.toLowerCase()).length > 0 ? 1 : 0")
+                  echo "result=$(node -p -e "['greazer', 'sevillal', 'shsuman', 'tbombach', 'yaoleo34'].filter(item => process.env.ISSUE_OWNER.toLowerCase() === item.toLowerCase()).length > 0 ? 1 : 0")" >> $GITHUB_OUTPUT
               shell: bash
             - name: Should we proceed
               id: proceed
@@ -27,13 +27,13 @@ jobs:
                   ISSUE_ASSIGNEES: ${{toJson(github.event.issue.assignees)}}
                   ISSUE_IS_INTERNAL: ${{steps.internal.outputs.result}}
               run: |
-                  echo ::set-output name=result::$(node -p -e "process.env.ISSUE_IS_INTERNAL === '0' && JSON.parse(process.env.ISSUE_ASSIGNEES).length === 0 ? 1 : 0")
+                  echo "result=$(node -p -e "process.env.ISSUE_IS_INTERNAL === '0' && JSON.parse(process.env.ISSUE_ASSIGNEES).length === 0 ? 1 : 0")" >> $GITHUB_OUTPUT
               shell: bash
             - name: Calculate week number
               if: steps.proceed.outputs.result == 1
               id: week
               run: |
-                echo ::set-output name=week::$(node .github/workflows/week.js)
+                echo "week=$(node .github/workflows/week.js)" >> $GITHUB_OUTPUT
               shell: bash            
             - name: Print week number
               if: steps.proceed.outputs.result == 1
@@ -47,7 +47,7 @@ jobs:
                 DRI_RESPONSIBLE_DEFAULT: ${{vars.DRI_RESPONSIBLE_DEFAULT}}
                 DRI_OWNERS: ${{vars.DRI_OWNERS}}
               run: |
-                echo ::set-output name=result::$(node .github/workflows/dri.js)
+                echo "result=$(node .github/workflows/dri.js)" >> $GITHUB_OUTPUT
               shell: bash
             - name: Print DRI responsible
               if: steps.proceed.outputs.result == 1
