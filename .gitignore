@@ -290,3 +290,5 @@ __pycache__/
 # AML
 **/aml_config/*
 **/azureml_outputs/*
+archive/.DS_Store
+.DS_Store
