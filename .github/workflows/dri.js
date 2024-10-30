@@ -2,7 +2,7 @@ var getWeekNumber = require('./getWeekNumber.js');
 
 function getDRIResponsible(driOwnersString) {
     if (!driOwnersString) {
-        return process.env.DRI_RESPONSIBLE_DEFAULT || 'tbombach';
+        return process.env.DRI_RESPONSIBLE_DEFAULT || 'JerryYangKai';
     }
     const owners = driOwnersString.split(' ');
     const countOfOwners = owners.length;
