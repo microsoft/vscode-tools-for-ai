@@ -2,7 +2,7 @@
 name: Accessibility Issue
 about: File an issue related to accessibility fixes.
 labels: accessibility
-assignees: SiddhanthUnnithan, tbombach
+assignees: JerryYangKai
 
 ---
 
