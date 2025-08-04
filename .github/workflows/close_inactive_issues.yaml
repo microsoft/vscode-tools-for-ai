@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           
       - name: Get date 30 days ago
         id: last-month
@@ -59,6 +59,8 @@ jobs:
           done
           
       - name: Triage active issues
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           echo "Checking active issues for triage..."
           
