@@ -79,8 +79,8 @@ jobs:
               
               echo "Last comment/interaction by: $LAST_COMMENT"
               
-              # Check if last comment author is not siglud
-              if [ "$LAST_COMMENT" != "siglud" ] && [ ! -z "$LAST_COMMENT" ]; then
+              # Check if last comment author is not Siglud
+              if [ "$LAST_COMMENT" != "Siglud" ] && [ ! -z "$LAST_COMMENT" ]; then
                 echo "Issue #$issue_number needs triage (last interaction by $LAST_COMMENT)"
                 
                 # Get current labels
@@ -99,7 +99,7 @@ jobs:
                   gh issue edit $issue_number --repo ${{ github.repository }} --remove-label "info-needed"
                 fi
               else
-                echo "Issue #$issue_number last interaction by siglud, skipping"
+                echo "Issue #$issue_number last interaction by Siglud, skipping"
               fi
             fi
           done
