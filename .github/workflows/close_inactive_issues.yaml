@@ -51,6 +51,12 @@ jobs:
             if [ ! -z "$issue_number" ]; then
               echo "Processing issue #$issue_number"
 
+              ISSUE_LABELS=$(gh issue view $issue_number --json labels --jq '.labels[].name' | tr '\n' ' ')
+              if [[ "$ISSUE_LABELS" =~ "triage-needed" ]]; then
+                echo "Issue #$issue_number has triage-needed label, skipping"
+                continue
+              fi
+
               # Close the issue
               gh issue close $issue_number --comment "Due to lack of details for further investigation, we will archive the issue for now. In case you still have following-up questions on this issue, please always feel free to reopen the issue by clicking 'reopen issue' button below the comment box. We will get back to you as soon as possible."
               
