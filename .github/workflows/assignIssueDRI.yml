@@ -13,7 +13,7 @@ jobs:
         runs-on: ubuntu-latest
         if: github.repository == 'microsoft/vscode-tools-for-ai'
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
             - name: Created internally
               id: internal
               env:
@@ -58,7 +58,7 @@ jobs:
               if: steps.proceed.outputs.result == 1
               env:
                 DRI_RESPONSIBLE: ${{steps.dri.outputs.result}}
-              uses: actions/github-script@v6.4.1
+              uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410 # v6.4.1
               with:
                 github-token: ${{secrets.GITHUB_TOKEN}}
                 script: |
